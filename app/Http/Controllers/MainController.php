@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\HeroSection;
+use App\Models\Gallery;
 use App\Models\Service;
+use App\Models\HeroSection;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -23,7 +24,9 @@ class MainController extends Controller
 
     public function about()
     {
-        return view ('main.about');
+        $services = Service::all();
+
+        return view ('main.about', compact('services'));
     }
 
     public function service()
@@ -44,7 +47,9 @@ class MainController extends Controller
 
     public function gallery()
     {
-        return view ('main.gallery');
+        $galleries = Gallery::all();
+
+        return view ('main.gallery', compact('galleries'));
     }
 
     public function blog()
@@ -59,7 +64,9 @@ class MainController extends Controller
 
     public function quote()
     {
-        return view ('main.quote');
+        $services = Service::all();
+
+        return view ('main.quote', compact('services'));
     }
 
     /**

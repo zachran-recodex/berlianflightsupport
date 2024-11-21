@@ -19,233 +19,51 @@
         <!-- End .container-->
     </section>
     <!-- End #page-title-->
-    <!--
-          ============================
-          Images Gallery Section
-          ============================
-          -->
+
     <section class="work work-gallery">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-4 work-item ">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/1.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/1.jpg" title="undefined item"></a>
+                @forelse ($galleries as $gallery)
+                    <div class="col-12 col-md-6 col-lg-4 work-item ">
+                        <div class="work-item-container">
+                            <div class="work-img">
+                                <img src="{{ asset('storage/' . $gallery->image) }}" alt="Gallery" />
+                                <div class="work-hover">
+                                    <div class="work-action">
+                                        <div class="work-zoom">
+                                            <a class="img-gallery-item" href="{{ asset('storage/' . $gallery->image) }}"
+                                                title="Gallery"></a>
+                                        </div>
                                     </div>
+                                    <!-- End .work-action -->
                                 </div>
-                                <!-- End .work-action -->
+                                <!-- End .work-hover-->
                             </div>
-                            <!-- End .work-hover-->
+                            <!-- End .work-img-->
                         </div>
-                        <!-- End .work-img-->
+                        <!-- End .work-item-container-->
                     </div>
-                    <!-- End .work-item-container-->
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 work-item ">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/2.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/2.jpg" title="undefined item"></a>
+                @empty
+                    <div class="col-12 col-md-6 col-lg-4 work-item ">
+                        <div class="work-item-container">
+                            <div class="work-img"><img src="{{ asset('') }}images/work/grid/1.jpg"
+                                    alt="undefined item" />
+                                <div class="work-hover">
+                                    <div class="work-action">
+                                        <div class="work-zoom"><a class="img-gallery-item"
+                                                href="{{ asset('') }}images/work/full/1.jpg"
+                                                title="undefined item"></a>
+                                        </div>
                                     </div>
+                                    <!-- End .work-action -->
                                 </div>
-                                <!-- End .work-action -->
+                                <!-- End .work-hover-->
                             </div>
-                            <!-- End .work-hover-->
+                            <!-- End .work-img-->
                         </div>
-                        <!-- End .work-img-->
+                        <!-- End .work-item-container-->
                     </div>
-                    <!-- End .work-item-container-->
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 work-item">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/3.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/3.jpg" title="undefined item"></a>
-                                    </div>
-                                </div>
-                                <!-- End .work-action -->
-                            </div>
-                            <!-- End .work-hover-->
-                        </div>
-                        <!-- End .work-img-->
-                    </div>
-                    <!-- End .work-item-container-->
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 work-item ">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/4.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/4.jpg" title="undefined item"></a>
-                                    </div>
-                                </div>
-                                <!-- End .work-action -->
-                            </div>
-                            <!-- End .work-hover-->
-                        </div>
-                        <!-- End .work-img-->
-                    </div>
-                    <!-- End .work-item-container-->
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 work-item ">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/5.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/5.jpg"
-                                            title="undefined item"></a></div>
-                                </div>
-                                <!-- End .work-action -->
-                            </div>
-                            <!-- End .work-hover-->
-                        </div>
-                        <!-- End .work-img-->
-                    </div>
-                    <!-- End .work-item-container-->
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 work-item">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/6.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/6.jpg"
-                                            title="undefined item"></a></div>
-                                </div>
-                                <!-- End .work-action -->
-                            </div>
-                            <!-- End .work-hover-->
-                        </div>
-                        <!-- End .work-img-->
-                    </div>
-                    <!-- End .work-item-container-->
-                </div>
-            </div>
-            <!-- End .row-->
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4 content d-none work-item ">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/1.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/1.jpg"
-                                            title="undefined item"></a></div>
-                                </div>
-                                <!-- End .work-action -->
-                            </div>
-                            <!-- End .work-hover-->
-                        </div>
-                        <!-- End .work-img-->
-                    </div>
-                    <!-- End .work-item-container-->
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 content d-none work-item ">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/2.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/2.jpg"
-                                            title="undefined item"></a></div>
-                                </div>
-                                <!-- End .work-action -->
-                            </div>
-                            <!-- End .work-hover-->
-                        </div>
-                        <!-- End .work-img-->
-                    </div>
-                    <!-- End .work-item-container-->
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 content d-none work-item">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/3.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/3.jpg"
-                                            title="undefined item"></a></div>
-                                </div>
-                                <!-- End .work-action -->
-                            </div>
-                            <!-- End .work-hover-->
-                        </div>
-                        <!-- End .work-img-->
-                    </div>
-                    <!-- End .work-item-container-->
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 content d-none work-item ">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/4.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/4.jpg"
-                                            title="undefined item"></a></div>
-                                </div>
-                                <!-- End .work-action -->
-                            </div>
-                            <!-- End .work-hover-->
-                        </div>
-                        <!-- End .work-img-->
-                    </div>
-                    <!-- End .work-item-container-->
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 content d-none work-item ">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/5.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/5.jpg"
-                                            title="undefined item"></a></div>
-                                </div>
-                                <!-- End .work-action -->
-                            </div>
-                            <!-- End .work-hover-->
-                        </div>
-                        <!-- End .work-img-->
-                    </div>
-                    <!-- End .work-item-container-->
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 content d-none work-item">
-                    <div class="work-item-container">
-                        <div class="work-img"><img src="{{ asset('') }}images/work/grid/6.jpg"
-                                alt="undefined item" />
-                            <div class="work-hover">
-                                <div class="work-action">
-                                    <div class="work-zoom"><a class="img-gallery-item"
-                                            href="{{ asset('') }}images/work/full/6.jpg"
-                                            title="undefined item"></a></div>
-                                </div>
-                                <!-- End .work-action -->
-                            </div>
-                            <!-- End .work-hover-->
-                        </div>
-                        <!-- End .work-img-->
-                    </div>
-                    <!-- End .work-item-container-->
-                </div>
+                @endforelse
             </div>
             <!-- End .row-->
             <div class="row">

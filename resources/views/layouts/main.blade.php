@@ -115,12 +115,14 @@
                             </div>
                             <div class="widget-content">
                                 <ul>
-                                    <li><a href="javascript:void(0)">warehouse</a></li>
-                                    <li><a href="javascript:void(0)">air freight</a></li>
-                                    <li><a href="javascript:void(0)">ocean freight</a></li>
-                                    <li><a href="javascript:void(0)">road freight</a></li>
-                                    <li><a href="javascript:void(0)">supply chain</a></li>
-                                    <li><a href="javascript:void(0)">packaging</a></li>
+                                    @forelse ($navServices as $item)
+                                        <li>
+                                            <a href="{{ route('service.detail', $item->slug) }}">
+                                                {{ $item->title }}
+                                            </a>
+                                        @empty
+                                        <li><a href="#">No Services</a></li>
+                                    @endforelse
                                 </ul>
                             </div>
                         </div>

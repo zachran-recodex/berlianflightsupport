@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
+use App\Services\AppConfigService;
+use Illuminate\Support\Facades\View;
+use App\Http\View\Composers\SettingComposer;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -12,7 +15,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // Daftarkan AppConfigService ke service container
+        $this->app->singleton(AppConfigService::class, function ($app) {
+            return new AppConfigService();
+        });
+
+        // Daftarkan SettingComposer untuk semua view
+        View::composer('*', SettingComposer::class);
     }
 
     /**

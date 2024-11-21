@@ -24,34 +24,29 @@
         <!-- End .container-->
     </section>
     <!-- End #page-title-->
-    <!--
-          ============================
-          Request Quote Section
-          ============================
-          -->
+
     <section class="request-quote contact-card" id="request-quote">
         <div class="container">
             <div class="row">
-                <!--
-                ============================
-                Sidebar Area
-                ============================
-                -->
+
                 <div class="col-sm-12 col-md-12 col-lg-4 order-2 order-lg-0">
                     <div class="sidebar sidebar-case-study">
                         <!-- Start .widget-categories-->
                         <div class="widget widget-categories">
                             <div class="widget-title">
-                                <h5>transport services</h5>
+                                <h5>Our Services</h5>
                             </div>
                             <div class="widget-content">
                                 <ul class="list-unstyled">
-                                    <li><a href="javascript:void(0)">warehouse</a></li>
-                                    <li><a href="javascript:void(0)">air freight</a></li>
-                                    <li><a href="javascript:void(0)">ocean freight</a></li>
-                                    <li><a href="javascript:void(0)">road freight</a></li>
-                                    <li><a href="javascript:void(0)">supply chain</a></li>
-                                    <li><a href="javascript:void(0)">packaging</a></li>
+                                    @forelse ($services as $service)
+                                        <li>
+                                            <a href="{{ route('service.detail', $service->slug) }}">
+                                                {{ $service->title }}
+                                            </a>
+                                        </li>
+                                    @empty
+                                        <li><a href="#">No Service</a></li>
+                                    @endforelse
                                 </ul>
                             </div>
                         </div>

@@ -28,11 +28,7 @@
         <!-- End .container-->
     </section>
     <!-- End #page-title-->
-    <!--
-          ============================
-          About #4 Section
-          ============================
-          -->
+
     <section class="about about-4" id="about-4">
         <div class="container">
             <div class="row">
@@ -100,11 +96,7 @@
         </div>
         <!-- End .container-->
     </section>
-    <!--
-          ============================
-          CTA #3 Section
-          ============================
-          -->
+
     <section class="cta cta-3 bg-theme" id="cta-3">
         <div class="container">
             <div class="row">
@@ -171,11 +163,7 @@
         </div>
         <!-- End .container-->
     </section>
-    <!--
-          ============================
-          Cases & Clients #2 Section
-          ============================
-          -->
+
     <section class="cases-clients cases-clients-2 bg-parllax" id="cases-clients-2">
         <div class="cases-standard">
             <div class="container">
@@ -188,132 +176,59 @@
                         <div class="carousel owl-carousel carousel-navs carousel-dots" data-slide="3"
                             data-slide-rs="1" data-autoplay="true" data-nav="true" data-dots="false"
                             data-space="30" data-loop="true" data-speed="3000">
-                            <div class="case-item">
-                                <div class="case-item-warp">
-                                    <div class="case-img"><img src="{{ asset('') }}images/work/full/1.jpg"
-                                            alt="work Item Image" /></div>
-                                    <!-- End .work-img-->
-                                    <div class="case-content">
-                                        <div class="case-title">
-                                            <h4><a href="case-study-single.html">floride chemical factory</a></h4>
+                            @forelse ($services as $service)
+                                <div class="case-item">
+                                    <div class="case-item-warp">
+                                        <div class="case-img">
+                                            <img src="{{ asset('storage/' . $service->image) }}"
+                                                alt="{{ $service->title }}" />
                                         </div>
-                                        <div class="case-cat"><a href="javascript:void(0)">analytics</a><a
-                                                href="javascript:void(0)">optimization</a></div>
-                                        <div class="case-desc">
-                                            <p>We understand that data is the greatest asset when it comes to analyzing
-                                                and optimizing your supply chain performance.</p>
+                                        <!-- End .work-img-->
+                                        <div class="case-content">
+                                            <div class="case-title">
+                                                <h4><a href="case-study-single.html">{{ $service->title }}</a></h4>
+                                            </div>
+                                            <div class="case-desc">
+                                                <p>
+                                                    {!! Str::limit($service->description, 20) !!}
+                                                </p>
+                                            </div>
+                                            <div class="case-more">
+                                                <a href="{{ route('service.detail', $service->slug) }}">
+                                                    <i class="icon-arrow-right"></i> Learn More
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div class="case-more"><a href="case-study-single.html"><i
-                                                    class="icon-arrow-right"></i> explore case study</a></div>
+                                        <!-- End .work-content-->
                                     </div>
-                                    <!-- End .work-content-->
                                 </div>
-                            </div>
-                            <div class="case-item">
-                                <div class="case-item-warp">
-                                    <div class="case-img"><img src="{{ asset('') }}images/work/full/2.jpg"
-                                            alt="work Item Image" /></div>
-                                    <!-- End .work-img-->
-                                    <div class="case-content">
-                                        <div class="case-title">
-                                            <h4><a href="case-study-single.html">warehouse inventory</a></h4>
+                            @empty
+                                <div class="case-item">
+                                    <div class="case-item-warp">
+                                        <div class="case-img">
+                                            <img src="{{ asset('') }}images/work/full/1.jpg"
+                                                alt="work Item Image" />
                                         </div>
-                                        <div class="case-cat"><a href="javascript:void(0)">warehousing</a><a
-                                                href="javascript:void(0)">distrbution</a></div>
-                                        <div class="case-desc">
-                                            <p>Cost savings is crucial, innovative technology minimizes your overall
-                                                spend by utilizing an schedule.</p>
+                                        <!-- End .work-img-->
+                                        <div class="case-content">
+                                            <div class="case-title">
+                                                <h4><a href="#">No Service</a></h4>
+                                            </div>
+                                            <div class="case-desc">
+                                                <p>
+                                                    -
+                                                </p>
+                                            </div>
+                                            <div class="case-more">
+                                                <a href="#">
+                                                    <i class="icon-arrow-right"></i> Back
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div class="case-more"><a href="case-study-single.html"><i
-                                                    class="icon-arrow-right"></i> explore case study</a></div>
+                                        <!-- End .work-content-->
                                     </div>
-                                    <!-- End .work-content-->
                                 </div>
-                            </div>
-                            <div class="case-item">
-                                <div class="case-item-warp">
-                                    <div class="case-img"><img src="{{ asset('') }}images/work/full/3.jpg"
-                                            alt="work Item Image" /></div>
-                                    <!-- End .work-img-->
-                                    <div class="case-content">
-                                        <div class="case-title">
-                                            <h4><a href="case-study-single.html">Minimize Manufacturing</a></h4>
-                                        </div>
-                                        <div class="case-cat"><a href="javascript:void(0)">logistics</a><a
-                                                href="javascript:void(0)">analytics</a></div>
-                                        <div class="case-desc">
-                                            <p>Our Group has been building relationships and projects that last. Serving
-                                                an impressive list of long-term.</p>
-                                        </div>
-                                        <div class="case-more"><a href="case-study-single.html"><i
-                                                    class="icon-arrow-right"></i> explore case study</a></div>
-                                    </div>
-                                    <!-- End .work-content-->
-                                </div>
-                            </div>
-                            <div class="case-item">
-                                <div class="case-item-warp">
-                                    <div class="case-img"><img src="{{ asset('') }}images/work/full/1.jpg"
-                                            alt="work Item Image" /></div>
-                                    <!-- End .work-img-->
-                                    <div class="case-content">
-                                        <div class="case-title">
-                                            <h4><a href="case-study-single.html">floride chemical factory</a></h4>
-                                        </div>
-                                        <div class="case-cat"><a href="javascript:void(0)">analytics</a><a
-                                                href="javascript:void(0)">optimization</a></div>
-                                        <div class="case-desc">
-                                            <p>We understand that data is the greatest asset when it comes to analyzing
-                                                and optimizing your supply chain performance.</p>
-                                        </div>
-                                        <div class="case-more"><a href="case-study-single.html"><i
-                                                    class="icon-arrow-right"></i> explore case study</a></div>
-                                    </div>
-                                    <!-- End .work-content-->
-                                </div>
-                            </div>
-                            <div class="case-item">
-                                <div class="case-item-warp">
-                                    <div class="case-img"><img src="{{ asset('') }}images/work/full/2.jpg"
-                                            alt="work Item Image" /></div>
-                                    <!-- End .work-img-->
-                                    <div class="case-content">
-                                        <div class="case-title">
-                                            <h4><a href="case-study-single.html">warehouse inventory</a></h4>
-                                        </div>
-                                        <div class="case-cat"><a href="javascript:void(0)">warehousing</a><a
-                                                href="javascript:void(0)">distrbution</a></div>
-                                        <div class="case-desc">
-                                            <p>Cost savings is crucial, innovative technology minimizes your overall
-                                                spend by utilizing an schedule.</p>
-                                        </div>
-                                        <div class="case-more"><a href="case-study-single.html"><i
-                                                    class="icon-arrow-right"></i> explore case study</a></div>
-                                    </div>
-                                    <!-- End .work-content-->
-                                </div>
-                            </div>
-                            <div class="case-item">
-                                <div class="case-item-warp">
-                                    <div class="case-img"><img src="{{ asset('') }}images/work/full/3.jpg"
-                                            alt="work Item Image" /></div>
-                                    <!-- End .work-img-->
-                                    <div class="case-content">
-                                        <div class="case-title">
-                                            <h4><a href="case-study-single.html">Minimize Manufacturing</a></h4>
-                                        </div>
-                                        <div class="case-cat"><a href="javascript:void(0)">logistics</a><a
-                                                href="javascript:void(0)">analytics</a></div>
-                                        <div class="case-desc">
-                                            <p>Our Group has been building relationships and projects that last. Serving
-                                                an impressive list of long-term.</p>
-                                        </div>
-                                        <div class="case-more"><a href="case-study-single.html"><i
-                                                    class="icon-arrow-right"></i> explore case study</a></div>
-                                    </div>
-                                    <!-- End .work-content-->
-                                </div>
-                            </div>
+                            @endforelse
                         </div>
                     </div>
                 </div>
