@@ -34,7 +34,7 @@ class RolePermissionSeeder extends Seeder
         }
 
         // Membuat role 'admin'
-        $superAdminRole = Role::firstOrCreate([
+        $adminRole = Role::firstOrCreate([
             'name' => 'admin',
         ]);
 
@@ -48,6 +48,6 @@ class RolePermissionSeeder extends Seeder
         );
 
         // Assign role 'admin' ke Admin
-        $admin->assignRole($superAdminRole);
+        $admin->assignRole($adminRole);
     }
 }
