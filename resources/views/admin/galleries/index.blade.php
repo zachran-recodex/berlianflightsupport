@@ -42,11 +42,11 @@
                                     </td>
                                     <td class="border border-gray-300 px-4 py-2">
                                         <div class="flex gap-2">
-                                            <a href="{{ route('admin.galleries.edit', $gallery->slug) }}"
+                                            <a href="{{ route('admin.galleries.edit', $gallery->id) }}"
                                                 class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600">
                                                 Edit
                                             </a>
-                                            <form action="{{ route('admin.galleries.destroy', $gallery->slug) }}"
+                                            <form action="{{ route('admin.galleries.destroy', $gallery->id) }}"
                                                 method="POST"
                                                 onsubmit="return confirm('Are you sure you want to delete this item?');">
                                                 @csrf
