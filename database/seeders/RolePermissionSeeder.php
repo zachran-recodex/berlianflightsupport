@@ -19,8 +19,8 @@ class RolePermissionSeeder extends Seeder
             'manage abouts',
             'manage blogs',
             'manage contacts',
-            'manage hero_sections',
-            'manage page_setups',
+            'manage heroSections',
+            'manage pageSetups',
             'manage services',
             'manage settings',
         ];

@@ -4,82 +4,55 @@
             <div class="carousel owl-carousel custom-carousel carousel-navs carousel-dots" data-slide="1" data-slide-rs="1"
                 data-autoplay="false" data-nav="true" data-dots="true" data-space="0" data-loop="true" data-speed="800"
                 data-slider-id="#custom-carousel">
-                <!--  Start .slide-->
-                <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
-                    <div class="bg-section"><img src="{{ asset('') }}images/sliders/5.jpg" alt="Background" /></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-7">
-                                <div class="slide-content">
-                                    <h1 class="slide-headline">advanced supply <br />chain technology</h1>
-                                    <ul class="slide-list">
-                                        <li><i class="fas fa-check-circle"></i> Quality Control System, 100%
-                                            Satisfaction Guarantee</li>
-                                        <li><i class="fas fa-check-circle"></i> Highly Professional Staff, Accurate
-                                            Testing Processes</li>
-                                        <li><i class="fas fa-check-circle"></i> Unrivalled workmanship, Professional and
-                                            Qualified</li>
-                                    </ul>
-                                    <div class="slide-buttons"><a class="btn btn--white btn--inverse"
-                                            href="javascript:void(0)">more about us</a><a class="btn btn--transparent"
-                                            href="javascript:void(0)">our services</a></div>
-                                </div>
-                                <!-- End .slide-content -->
-                            </div>
+                @forelse ($heroSections as $heroSection)
+                    <!--  Start .slide-->
+                    <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
+                        <div class="bg-section">
+                            <img src="{{ asset('storage/' . $heroSection->image) }}" alt="{{ $heroSection->title }}" />
                         </div>
-                        <!--  End .row-->
-                    </div>
-                </div>
-                <!-- End .slide-->
-                <!--  Start .slide-->
-                <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
-                    <div class="bg-section"><img src="{{ asset('') }}images/sliders/1.jpg" alt="Background" /></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-8">
-                                <div class="slide-content">
-                                    <h2 class="slide-headline">reliable logistics &<br />transport solutions</h2>
-                                    <ul class="slide-list">
-                                        <li><i class="fas fa-check-circle"></i> Quality Control System, 100%
-                                            Satisfaction Guarantee</li>
-                                        <li><i class="fas fa-check-circle"></i> Highly Professional Staff, Accurate
-                                            Testing Processes</li>
-                                        <li><i class="fas fa-check-circle"></i> Unrivalled workmanship, Professional and
-                                            Qualified</li>
-                                    </ul>
-                                    <div class="slide-buttons"><a class="btn btn--white btn--inverse"
-                                            href="javascript:void(0)">more about us</a><a class="btn btn--transparent"
-                                            href="javascript:void(0)">our services</a></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-lg-7">
+                                    <div class="slide-content">
+                                        <!-- Subtitle -->
+                                        <p class="slide-subheadline">{{ $heroSection->subtitle }}</p>
+
+                                        <!-- Title -->
+                                        <h2 class="slide-headline">{!! nl2br(e($heroSection->title)) !!}</h2>
+
+                                        <!-- Description -->
+                                        <p class="slide-desc">{{ $heroSection->description }}</p>
+
+                                        <!-- Buttons -->
+                                        <div class="slide-buttons">
+                                            <a class="btn btn--primary" href="javascript:void(0)">Learn More</a>
+                                            <a class="btn btn--white" href="javascript:void(0)">Contact Us</a>
+                                        </div>
+                                    </div>
+                                    <!-- End .slide-content -->
                                 </div>
-                                <!-- End .slide-content -->
                             </div>
+                            <!--  End .row-->
                         </div>
-                        <!--  End .row-->
                     </div>
-                </div>
-                <!-- End .slide-->
-                <!--  Start .slide-->
-                <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
-                    <div class="bg-section"><img src="{{ asset('') }}images/sliders/4.jpg" alt="Background" /></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-7">
-                                <div class="slide-content">
-                                    <p class="slide-subheadline">Flexibile, Improved And accelerated Solutions</p>
-                                    <h2 class="slide-headline">your flexible<br />road directions!</h2>
-                                    <p class="slide-desc">Representative logistics operator providing full range of
-                                        service in the sphere of customs clearance and transportation worldwide.</p>
-                                    <div class="slide-buttons"><a class="btn btn--primary"
-                                            href="javascript:void(0)">more about us</a><a class="btn btn--white"
-                                            href="javascript:void(0)">our services</a></div>
+                    <!-- End .slide-->
+                @empty
+                    <!-- Pesan jika tidak ada data -->
+                    <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <div class="slide-content">
+                                        <h2 class="slide-headline text-white">No Hero Sections Available</h2>
+                                        <p class="slide-desc text-white">Please add some Hero Sections to display here.
+                                        </p>
+                                    </div>
                                 </div>
-                                <!-- End .slide-content -->
                             </div>
+                            <!--  End .row-->
                         </div>
-                        <!--  End .row-->
                     </div>
-                </div>
-                <!-- End .slide-->
+                @endforelse
             </div>
         </div>
         <!--  End .container-fluid-->
@@ -180,8 +153,8 @@
                 <div class="col-12 col-lg-5">
                     <div class="about-img">
                         <div class="about-img-warp bg-overlay">
-                            <div class="bg-section"><img class="img-fluid"
-                                    src="{{ asset('') }}images/about/1.jpg" alt="about Image" /></div>
+                            <div class="bg-section"><img class="img-fluid" src="{{ asset('') }}images/about/1.jpg"
+                                    alt="about Image" /></div>
                         </div>
                         <div class="counter">
                             <div class="counter-icon"> <i class="flaticon-018-packaging"></i></div>
@@ -215,105 +188,50 @@
             </div>
             <!-- End .row-->
             <div class="row services-container">
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="service-panel">
-                        <div class="service-panel-container">
-                            <div class="service-img"><a href="javascript:void(0)"></a><img
-                                    src="{{ asset('') }}images/services/1.jpg" alt="service img" /></div>
-                            <!-- End .work-img-->
-                            <div class="service-content">
-                                <div class="service-title">
-                                    <h4><a href="javascript:void(0)">air freight</a></h4>
+                @forelse ($services as $service)
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="service-panel">
+                            <div class="service-panel-container">
+                                <div class="service-img">
+                                    <a href="{{ route('service.detail', $service->slug) }}"></a>
+                                    <img src="{{ asset('storage/' . $service->image) }}"
+                                        alt="{{ $service->title }}" />
                                 </div>
-                                <div class="service-desc">
-                                    <p>We can provide with the comprehensive service in the sphere of urgent, valuable,
-                                        fragile or any cargoes conscientious.</p>
+                                <!-- End .work-img-->
+                                <div class="service-content">
+                                    <div class="service-title">
+                                        <h4><a
+                                                href="{{ route('service.detail', $service->slug) }}">{{ $service->title }}</a>
+                                        </h4>
+                                    </div>
+                                    <div class="service-desc">
+                                        <p>
+                                            {!! Str::limit($service->description, 20) !!}
+                                        </p>
+                                    </div>
+                                    <div class="service-more">
+                                        <a class="btn" href="{{ route('service.detail', $service->slug) }}">
+                                            <i class="icon-arrow-right"></i>
+                                            <span>read more</span>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="service-list">
-                                    <ul class="list-unstyled">
-                                        <li> <a href="javascript:void(0)"><i
-                                                    class="fas fa-check-circle"></i><span>quality control
-                                                    system</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>100% satisfaction
-                                                    guarantee</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>highly professional
-                                                    staff</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
-                                            class="icon-arrow-right"></i><span>read more</span></a></div>
+                                <!-- End .work-content -->
                             </div>
-                            <!-- End .work-content -->
+                            <!-- End .work-item-container-->
                         </div>
-                        <!-- End .work-item-container-->
                     </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="service-panel">
-                        <div class="service-panel-container">
-                            <div class="service-img"><a href="javascript:void(0)"></a><img
-                                    src="{{ asset('') }}images/services/2.jpg" alt="service img" /></div>
-                            <!-- End .work-img-->
-                            <div class="service-content">
-                                <div class="service-title">
-                                    <h4><a href="javascript:void(0)">ocean freight</a></h4>
-                                </div>
-                                <div class="service-desc">
-                                    <p>We provides with the main types of basic sea transportation is implemented by our
-                                        partners’ vessels.</p>
-                                </div>
-                                <div class="service-list">
-                                    <ul class="list-unstyled">
-                                        <li> <a href="javascript:void(0)"><i
-                                                    class="fas fa-check-circle"></i><span>unrivalled
-                                                    workmanship</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>accurate testing
-                                                    processes</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>professional &amp;
-                                                    qualified</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
-                                            class="icon-arrow-right"></i><span>read more</span></a></div>
-                            </div>
-                            <!-- End .work-content -->
+                @empty
+                    <div class="col-12">
+                        <div class="text-center py-5">
+                            <p class="text-gray-500">No services available at the moment.</p>
+                            <a href="{{ route('home') }}" class="btn btn-primary">
+                                <i class="icon-home"></i>
+                                <span>Go Back to Home</span>
+                            </a>
                         </div>
-                        <!-- End .work-item-container-->
                     </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="service-panel">
-                        <div class="service-panel-container">
-                            <div class="service-img"><a href="javascript:void(0)"></a><img
-                                    src="{{ asset('') }}images/services/3.jpg" alt="service img" /></div>
-                            <!-- End .work-img-->
-                            <div class="service-content">
-                                <div class="service-title">
-                                    <h4><a href="javascript:void(0)">road freight</a></h4>
-                                </div>
-                                <div class="service-desc">
-                                    <p>We provides with the main types of basic sea transportation is implemented by our
-                                        partners’ vessels.</p>
-                                </div>
-                                <div class="service-list">
-                                    <ul class="list-unstyled">
-                                        <li> <a href="javascript:void(0)"><i
-                                                    class="fas fa-check-circle"></i><span>commercial
-                                                    expertise</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>sustanabillity
-                                                    goals</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>logistical
-                                                    expertise</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
-                                            class="icon-arrow-right"></i><span>read more</span></a></div>
-                            </div>
-                            <!-- End .work-content -->
-                        </div>
-                        <!-- End .work-item-container-->
-                    </div>
-                </div>
+                @endforelse
             </div>
             <!-- End .row-->
         </div>

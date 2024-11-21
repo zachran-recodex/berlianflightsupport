@@ -1,10 +1,4 @@
 <x-main-layout>
-
-    <!--
-      ============================
-      Hero Section
-      ============================
-      -->
     <section class="hero bg-overlay bg-overlay-dark" id="hero">
         <div class="bg-section"><img src="{{ asset('') }}images/sliders/1.jpg" alt="Background" /></div>
         <div class="container">
@@ -23,11 +17,7 @@
         </div>
         <!-- End .container-->
     </section>
-    <!--
-      ============================
-      Services #1 Section
-      ============================
-      -->
+
     <section class="services" id="services-1">
         <div class="container">
             <div class="row">
@@ -41,204 +31,49 @@
             </div>
             <!-- End .row-->
             <div class="row">
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="service-panel">
-                        <div class="service-panel-container">
-                            <div class="service-img"><a href="javascript:void(0)"></a><img
-                                    src="{{ asset('') }}images/services/1.jpg" alt="service img" /></div>
-                            <!-- End .work-img-->
-                            <div class="service-content">
-                                <div class="service-title">
-                                    <h4><a href="javascript:void(0)">air freight</a></h4>
+                @forelse ($services as $service)
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="service-panel">
+                            <div class="service-panel-container">
+                                <div class="service-img">
+                                    <a href="{{ route('service.detail', $service->slug) }}"></a>
+                                    <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" />
                                 </div>
-                                <div class="service-desc">
-                                    <p>We can provide with the comprehensive service in the sphere of urgent, valuable,
-                                        fragile or any cargoes conscientious.</p>
+                                <!-- End .work-img-->
+                                <div class="service-content">
+                                    <div class="service-title">
+                                        <h4><a
+                                                href="{{ route('service.detail', $service->slug) }}">{{ $service->title }}</a>
+                                        </h4>
+                                    </div>
+                                    <div class="service-desc">
+                                        <p>
+                                            {!! Str::limit($service->description, 20) !!}
+                                        </p>
+                                    </div>
+                                    <div class="service-more">
+                                        <a class="btn" href="{{ route('service.detail', $service->slug) }}">
+                                            <i class="icon-arrow-right"></i>
+                                            <span>read more</span>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="service-list">
-                                    <ul class="list-unstyled">
-                                        <li> <a href="javascript:void(0)"><i
-                                                    class="fas fa-check-circle"></i><span>quality control
-                                                    system</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>100% satisfaction
-                                                    guarantee</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>highly professional
-                                                    staff</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
-                                            class="icon-arrow-right"></i><span>read more</span></a></div>
+                                <!-- End .work-content -->
                             </div>
-                            <!-- End .work-content -->
+                            <!-- End .work-item-container-->
                         </div>
-                        <!-- End .work-item-container-->
                     </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="service-panel">
-                        <div class="service-panel-container">
-                            <div class="service-img"><a href="javascript:void(0)"></a><img
-                                    src="{{ asset('') }}images/services/2.jpg" alt="service img" /></div>
-                            <!-- End .work-img-->
-                            <div class="service-content">
-                                <div class="service-title">
-                                    <h4><a href="javascript:void(0)">ocean freight</a></h4>
-                                </div>
-                                <div class="service-desc">
-                                    <p>We provides with the main types of basic sea transportation is implemented by our
-                                        partners’ vessels.</p>
-                                </div>
-                                <div class="service-list">
-                                    <ul class="list-unstyled">
-                                        <li> <a href="javascript:void(0)"><i
-                                                    class="fas fa-check-circle"></i><span>unrivalled
-                                                    workmanship</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>accurate testing
-                                                    processes</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>professional &amp;
-                                                    qualified</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
-                                            class="icon-arrow-right"></i><span>read more</span></a></div>
-                            </div>
-                            <!-- End .work-content -->
+                @empty
+                    <div class="col-12">
+                        <div class="text-center py-5">
+                            <p class="text-gray-500">No services available at the moment.</p>
+                            <a href="{{ route('home') }}" class="btn btn-primary">
+                                <i class="icon-home"></i>
+                                <span>Go Back to Home</span>
+                            </a>
                         </div>
-                        <!-- End .work-item-container-->
                     </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="service-panel">
-                        <div class="service-panel-container">
-                            <div class="service-img"><a href="javascript:void(0)"></a><img
-                                    src="{{ asset('') }}images/services/3.jpg" alt="service img" /></div>
-                            <!-- End .work-img-->
-                            <div class="service-content">
-                                <div class="service-title">
-                                    <h4><a href="javascript:void(0)">road freight</a></h4>
-                                </div>
-                                <div class="service-desc">
-                                    <p>We provides with the main types of basic sea transportation is implemented by our
-                                        partners’ vessels.</p>
-                                </div>
-                                <div class="service-list">
-                                    <ul class="list-unstyled">
-                                        <li> <a href="javascript:void(0)"><i
-                                                    class="fas fa-check-circle"></i><span>commercial
-                                                    expertise</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>sustanabillity goals</span></a>
-                                        </li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>logistical expertise</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
-                                            class="icon-arrow-right"></i><span>read more</span></a></div>
-                            </div>
-                            <!-- End .work-content -->
-                        </div>
-                        <!-- End .work-item-container-->
-                    </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="service-panel">
-                        <div class="service-panel-container">
-                            <div class="service-img"><a href="javascript:void(0)"></a><img
-                                    src="{{ asset('') }}images/services/4.jpg" alt="service img" /></div>
-                            <!-- End .work-img-->
-                            <div class="service-content">
-                                <div class="service-title">
-                                    <h4><a href="javascript:void(0)">warehousing</a></h4>
-                                </div>
-                                <div class="service-desc">
-                                    <p>We can provide with the comprehensive service in the sphere of urgent, valuable,
-                                        fragile or any cargoes conscientious.</p>
-                                </div>
-                                <div class="service-list">
-                                    <ul class="list-unstyled">
-                                        <li> <a href="javascript:void(0)"><i
-                                                    class="fas fa-check-circle"></i><span>quality control
-                                                    system</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>100% satisfaction
-                                                    guarantee</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>highly professional
-                                                    staff</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
-                                            class="icon-arrow-right"></i><span>read more</span></a></div>
-                            </div>
-                            <!-- End .work-content -->
-                        </div>
-                        <!-- End .work-item-container-->
-                    </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="service-panel">
-                        <div class="service-panel-container">
-                            <div class="service-img"><a href="javascript:void(0)"></a><img
-                                    src="{{ asset('') }}images/services/5.jpg" alt="service img" /></div>
-                            <!-- End .work-img-->
-                            <div class="service-content">
-                                <div class="service-title">
-                                    <h4><a href="javascript:void(0)">supply chain</a></h4>
-                                </div>
-                                <div class="service-desc">
-                                    <p>We provides with the main types of basic sea transportation is implemented by our
-                                        partners’ vessels.</p>
-                                </div>
-                                <div class="service-list">
-                                    <ul class="list-unstyled">
-                                        <li> <a href="javascript:void(0)"><i
-                                                    class="fas fa-check-circle"></i><span>unrivalled
-                                                    workmanship</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>accurate testing
-                                                    processes</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>professional &amp;
-                                                    qualified</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
-                                            class="icon-arrow-right"></i><span>read more</span></a></div>
-                            </div>
-                            <!-- End .work-content -->
-                        </div>
-                        <!-- End .work-item-container-->
-                    </div>
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="service-panel">
-                        <div class="service-panel-container">
-                            <div class="service-img"><a href="javascript:void(0)"></a><img
-                                    src="{{ asset('') }}images/services/6.jpg" alt="service img" /></div>
-                            <!-- End .work-img-->
-                            <div class="service-content">
-                                <div class="service-title">
-                                    <h4><a href="javascript:void(0)">packaging</a></h4>
-                                </div>
-                                <div class="service-desc">
-                                    <p>We provides with the main types of basic sea transportation is implemented by our
-                                        partners’ vessels.</p>
-                                </div>
-                                <div class="service-list">
-                                    <ul class="list-unstyled">
-                                        <li> <a href="javascript:void(0)"><i
-                                                    class="fas fa-check-circle"></i><span>commercial
-                                                    expertise</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>sustanabillity
-                                                    goals</span></a></li>
-                                        <li> <a><i class="fas fa-check-circle"></i><span>logistical
-                                                    expertise</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
-                                            class="icon-arrow-right"></i><span>read more</span></a></div>
-                            </div>
-                            <!-- End .work-content -->
-                        </div>
-                        <!-- End .work-item-container-->
-                    </div>
-                </div>
+                @endforelse
             </div>
             <!-- End .row-->
         </div>

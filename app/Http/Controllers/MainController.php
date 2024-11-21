@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HeroSection;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -11,7 +13,12 @@ class MainController extends Controller
      */
     public function index()
     {
-        return view ('index');
+        // Ambil semua data hero section
+        $heroSections = HeroSection::all();
+        $services = Service::all();
+
+        // Kirim data ke view
+        return view('index', compact('heroSections', 'services'));
     }
 
     public function about()
@@ -21,7 +28,18 @@ class MainController extends Controller
 
     public function service()
     {
-        return view ('main.service');
+        $services = Service::all();
+
+        return view ('main.service', compact('services'));
+    }
+
+    public function serviceDetail($slug)
+    {
+        $service = Service::where('slug', $slug)->firstOrFail();
+        $services = Service::orderBy('id')->paginate(5);
+
+        // Kirim data modul ke view
+        return view ('main.service-detail', compact('service', 'services'));
     }
 
     public function gallery()
