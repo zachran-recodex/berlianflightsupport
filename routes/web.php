@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
@@ -57,6 +58,10 @@ Route::middleware('auth')->group(function () {
 
         Route::middleware('can:manage settings')->group(function () {
             Route::resource('settings', SettingController::class);
+        });
+
+        Route::middleware('can:manage galleries')->group(function () {
+            Route::resource('galleries', GalleryController::class);
         });
     });
 });

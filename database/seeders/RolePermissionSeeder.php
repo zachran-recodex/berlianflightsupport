@@ -23,6 +23,7 @@ class RolePermissionSeeder extends Seeder
             'manage pageSetups',
             'manage services',
             'manage settings',
+            'manage galleries'
         ];
 
         // Membuat permission jika belum ada

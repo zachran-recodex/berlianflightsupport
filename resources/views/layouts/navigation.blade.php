@@ -36,6 +36,9 @@
                     <x-nav-link :href="route('admin.settings.index')" :active="request()->routeIs('admin.settings.index')">
                         {{ __('Setting') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('admin.galleries.index')" :active="request()->routeIs('admin.galleries.index')">
+                        {{ __('Gallery') }}
+                    </x-nav-link>
                 </div>
             </div>
 
