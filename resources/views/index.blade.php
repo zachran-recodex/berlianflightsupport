@@ -1,397 +1,126 @@
 <x-main-layout>
-
-    <section class="relative w-full h-screen bg-cover bg-center z-0"
-        style="background-image: url('{{ asset('images/background/home.jpg') }}');">
-        <div class="container mx-auto flex items-center justify-center h-full">
-            <div class="flex flex-col items-center text-center text-white max-w-4xl">
-                <h1 class="text-6xl font-bold leading-tight mb-4">Complete Flight <br />Support Solutions!</h1>
-                <p class="text-2xl mb-6">Your trusted companion – a companion who thinks, plans and organizes every step
-                    to get the job done.</p>
-                <div class="flex space-x-4">
-                    <a class="bg-bgs2-400 text-white px-6 py-2 rounded hover:bg-bgs2-500 transition-all duration-300"
-                        href="">Company Profile</a>
-                    <a class="bg-bgs1-950 text-white px-6 py-2 rounded hover:bg-bgs1-900 transition-all duration-300"
-                        href="">Contact Us</a>
+    <section class="slider slider-2" id="slider-2">
+        <div class="container-fluid pr-0 pl-0">
+            <div class="carousel owl-carousel custom-carousel carousel-navs carousel-dots" data-slide="1" data-slide-rs="1"
+                data-autoplay="false" data-nav="true" data-dots="true" data-space="0" data-loop="true" data-speed="800"
+                data-slider-id="#custom-carousel">
+                <!--  Start .slide-->
+                <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
+                    <div class="bg-section"><img src="{{ asset('') }}images/sliders/5.jpg" alt="Background" /></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-7">
+                                <div class="slide-content">
+                                    <h1 class="slide-headline">advanced supply <br />chain technology</h1>
+                                    <ul class="slide-list">
+                                        <li><i class="fas fa-check-circle"></i> Quality Control System, 100%
+                                            Satisfaction Guarantee</li>
+                                        <li><i class="fas fa-check-circle"></i> Highly Professional Staff, Accurate
+                                            Testing Processes</li>
+                                        <li><i class="fas fa-check-circle"></i> Unrivalled workmanship, Professional and
+                                            Qualified</li>
+                                    </ul>
+                                    <div class="slide-buttons"><a class="btn btn--white btn--inverse"
+                                            href="javascript:void(0)">more about us</a><a class="btn btn--transparent"
+                                            href="javascript:void(0)">our services</a></div>
+                                </div>
+                                <!-- End .slide-content -->
+                            </div>
+                        </div>
+                        <!--  End .row-->
+                    </div>
                 </div>
+                <!-- End .slide-->
+                <!--  Start .slide-->
+                <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
+                    <div class="bg-section"><img src="{{ asset('') }}images/sliders/1.jpg" alt="Background" /></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-8">
+                                <div class="slide-content">
+                                    <h2 class="slide-headline">reliable logistics &<br />transport solutions</h2>
+                                    <ul class="slide-list">
+                                        <li><i class="fas fa-check-circle"></i> Quality Control System, 100%
+                                            Satisfaction Guarantee</li>
+                                        <li><i class="fas fa-check-circle"></i> Highly Professional Staff, Accurate
+                                            Testing Processes</li>
+                                        <li><i class="fas fa-check-circle"></i> Unrivalled workmanship, Professional and
+                                            Qualified</li>
+                                    </ul>
+                                    <div class="slide-buttons"><a class="btn btn--white btn--inverse"
+                                            href="javascript:void(0)">more about us</a><a class="btn btn--transparent"
+                                            href="javascript:void(0)">our services</a></div>
+                                </div>
+                                <!-- End .slide-content -->
+                            </div>
+                        </div>
+                        <!--  End .row-->
+                    </div>
+                </div>
+                <!-- End .slide-->
+                <!--  Start .slide-->
+                <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
+                    <div class="bg-section"><img src="{{ asset('') }}images/sliders/4.jpg" alt="Background" /></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-7">
+                                <div class="slide-content">
+                                    <p class="slide-subheadline">Flexibile, Improved And accelerated Solutions</p>
+                                    <h2 class="slide-headline">your flexible<br />road directions!</h2>
+                                    <p class="slide-desc">Representative logistics operator providing full range of
+                                        service in the sphere of customs clearance and transportation worldwide.</p>
+                                    <div class="slide-buttons"><a class="btn btn--primary"
+                                            href="javascript:void(0)">more about us</a><a class="btn btn--white"
+                                            href="javascript:void(0)">our services</a></div>
+                                </div>
+                                <!-- End .slide-content -->
+                            </div>
+                        </div>
+                        <!--  End .row-->
+                    </div>
+                </div>
+                <!-- End .slide-->
             </div>
         </div>
+        <!--  End .container-fluid-->
     </section>
 
-    <section class="relative bottom-20 z-10 w-full">
-        <div class="container mx-auto bg-white border border-bgs1-950 rounded">
-            <div class="grid grid-cols-4 h-fit divide-x divide-bgs1-950">
-                <div class="p-4 flex items-center">
-                    <svg class="w-24 h-24 text-gray-800 dark:text-white" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                        viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                    </svg>
-                    <div class="">
-                        <p>Service</p>
-                        <h2>Ground Handling</h2>
-                    </div>
-                </div>
-                <div class="p-4 flex items-center">
-                    <svg class="w-24 h-24 text-gray-800 dark:text-white" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                        viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                    </svg>
-                    <div class="">
-                        <p>Service</p>
-                        <h2>Ground Handling</h2>
-                    </div>
-                </div>
-                <div class="p-4 flex items-center">
-                    <svg class="w-24 h-24 text-gray-800 dark:text-white" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                        viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                    </svg>
-                    <div class="">
-                        <p>Service</p>
-                        <h2>Ground Handling</h2>
-                    </div>
-                </div>
-                <div class="p-4 flex items-center">
-                    <svg class="w-24 h-24 text-gray-800 dark:text-white" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                        viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                    </svg>
-                    <div class="">
-                        <p>Service</p>
-                        <h2>Ground Handling</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="z-0 pb-20">
-        <div class="container mx-auto flex items-center space-x-8">
-            <div class="w-1/3">
-                <div class="relative h-[510px]">
-                    <img src="{{ asset('images/about/1.jpg') }}" alt=""
-                        class="object-cover absolute right-auto left-0 max-w-[400px] h-[510px] rounded">
-                    <div
-                        class="right-0 left-auto w-[207px] absolute bottom-[80px] bg-bgs1-950 rounded px-[40px] pt-[25px] pb-[30px] flex flex-col justify-center items-center text-white">
-                        <svg class="w-24 h-24 mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.5"
-                                d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                        </svg>
-                        <div class="flex items-baseline mb-2">
-                            <span class="text-5xl">108</span>
-                            <p class="text-3xl">m</p>
-                        </div>
-                        <h6>Ground Handling</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="w-2/3">
-                <div class="mb-8">
-                    <p class="text-lg text-bgs1-950">Lorem ipsum dolor sit amet consectetur.</p>
-                    <h2 class="font-bold text-5xl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <div class="w-2/3 space-y-4">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente laboriosam dolores aperiam
-                            incidunt voluptatem tempore. Delectus, sint officia.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quo accusamus voluptatibus
-                            sint ullam, illum eum autem optio.</p>
-                    </div>
-                    <div class="w-1/3 space-y-4">
-                        <div class="">
-                            <h6 class="font-semibold text-lg">
-                                Lorem.
-                            </h6>
-                            <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Voluptatibus a fuga saepe.</p>
-                        </div>
-                        <div class="">
-                            <h6 class="font-semibold text-lg">
-                                Lorem.
-                            </h6>
-                            <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Voluptatibus a fuga saepe.</p>
+    <section class="company-data" id="company-data-1">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-12 col-lg-3">
+                    <div class="data">
+                        <div class="data-icon"><i class="flaticon-034-call-center"></i></div>
+                        <div class="data-body">
+                            <h6>quick contact </h6><a href="mailto::Equita@7oroof.com">Equita@7oroof.com</a><a
+                                href="tel:01061245741">(002) 01061245741</a>
                         </div>
                     </div>
                 </div>
-                <div class="">
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="h-screen bg-cover bg-center"
-        style="background-image: url('{{ asset('images/background/home.jpg') }}');">
-        <div class="container mx-auto flex items-center justify-center h-full">
-            <div class="grid grid-cols-2 space-x-8 text-white">
-                <div class="flex flex-col justify-center">
-                    <div class="mb-16">
-                        <p class="text-lg">Lorem ipsum dolor sit amet consectetur.</p>
-                        <h2 class="font-bold text-5xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Reprehenderit, laborum adipisci?</h2>
-                    </div>
-                    <div class="grid grid-cols-3 space-x-4">
-                        <div>
-                            <svg class="w-24 h-24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                            </svg>
-                            <p class="text-2xl">Lorem, ipsum.</p>
-                        </div>
-                        <div>
-                            <svg class="w-24 h-24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                            </svg>
-                            <p class="text-2xl">Lorem, ipsum.</p>
-                        </div>
-                        <div>
-                            <svg class="w-24 h-24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                            </svg>
-                            <p class="text-2xl">Lorem, ipsum.</p>
+                <div class="col-12 col-lg-3">
+                    <div class="data">
+                        <div class="data-icon"><i class="flaticon-036-address-book"></i></div>
+                        <div class="data-body">
+                            <h6>our location</h6><a href="javascript:void(0)">2307 Beverley Rd Brooklyn, New York 11226
+                                United States.</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Form Request A Quote -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-8">
-                    <form class="space-y-4">
-                        <div class="flex flex-col">
-                            <label for="name" class="text-gray-700 font-medium">Name</label>
-                            <input type="text" id="name" name="name"
-                                class="border border-gray-300 p-2 rounded" placeholder="Enter your name" required>
-                        </div>
-                        <div class="flex flex-col">
-                            <label for="email" class="text-gray-700 font-medium">Email</label>
-                            <input type="email" id="email" name="email"
-                                class="border border-gray-300 p-2 rounded" placeholder="Enter your email" required>
-                        </div>
-                        <div class="flex flex-col">
-                            <label for="phone" class="text-gray-700 font-medium">Phone</label>
-                            <input type="tel" id="phone" name="phone"
-                                class="border border-gray-300 p-2 rounded" placeholder="Enter your phone number"
-                                required>
-                        </div>
-                        <div class="flex flex-col">
-                            <label for="message" class="text-gray-700 font-medium">Message</label>
-                            <textarea id="message" name="message" rows="4" class="border border-gray-300 p-2 rounded"
-                                placeholder="Enter your message"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Request a
-                            Quote</button>
-                    </form>
-                </div>
-                <!-- End of Form -->
-            </div>
-
-        </div>
-    </section>
-
-    <section class="py-20">
-        <div class="container mx-auto">
-            <!-- Responsive column grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 space-y-8 md:space-x-8">
-                <div>
-                    <p class="text-lg">Lorem ipsum dolor sit amet consectetur.</p>
-                    <h2 class="font-bold text-5xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint corrupti distinctio cumque ducimus
-                        deserunt nam esse quae saepe!</p>
-                    <div class="flex gap-8 mt-4">
-                        <a href="#" class="text-blue-600 hover:underline">Contact Us</a>
-                        <div class="flex flex-col">
-                            <a href="tel:+123456789" class="hover:text-blue-600">+62 822 9814 1930</a>
-                            <a href="mailto:OwH8F@example.com"
-                                class="hover:text-blue-600">sales@berlianflightsupport.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service grid items -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-                <!-- Example Service Box -->
-                <div class="relative p-6 border rounded hover:shadow-lg group">
-                    <!-- Hover-visible icon -->
-                    <div class="absolute hidden group-hover:block -top-12 -right-24">
-                        <svg class="w-24 h-24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.5"
-                                d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                        </svg>
-                    </div>
-                    <!-- Static content -->
-                    <div>
-                        <svg class="w-24 h-24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.5"
-                                d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                        </svg>
-                        <h4 class="text-lg font-bold">Ground Handling</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit esse.</p>
-                        <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">Read More</a>
-                    </div>
-                </div>
-                <!-- Example Service Box -->
-                <div class="relative p-6 border rounded hover:shadow-lg group">
-                    <!-- Hover-visible icon -->
-                    <div class="absolute hidden group-hover:block -top-12 -right-24">
-                        <svg class="w-24 h-24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.5"
-                                d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                        </svg>
-                    </div>
-                    <!-- Static content -->
-                    <div>
-                        <svg class="w-24 h-24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.5"
-                                d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                        </svg>
-                        <h4 class="text-lg font-bold">Ground Handling</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit esse.</p>
-                        <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">Read More</a>
-                    </div>
-                </div>
-                <!-- Example Service Box -->
-                <div class="relative p-6 border rounded hover:shadow-lg group">
-                    <!-- Hover-visible icon -->
-                    <div class="absolute hidden group-hover:block -top-12 -right-24">
-                        <svg class="w-24 h-24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.5"
-                                d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                        </svg>
-                    </div>
-                    <!-- Static content -->
-                    <div>
-                        <svg class="w-24 h-24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.5"
-                                d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                        </svg>
-                        <h4 class="text-lg font-bold">Ground Handling</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit esse.</p>
-                        <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">Read More</a>
-                    </div>
-                </div>
-                <!-- Example Service Box -->
-                <div class="relative p-6 border rounded hover:shadow-lg group">
-                    <!-- Hover-visible icon -->
-                    <div class="absolute hidden group-hover:block -top-12 -right-24">
-                        <svg class="w-24 h-24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.5"
-                                d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                        </svg>
-                    </div>
-                    <!-- Static content -->
-                    <div>
-                        <svg class="w-24 h-24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.5"
-                                d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                        </svg>
-                        <h4 class="text-lg font-bold">Ground Handling</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit esse.</p>
-                        <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-bgs1-950 py-20">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap">
-                <div class="w-full lg:w-5/12">
-                    <div class="text-white">
-                        <p class="text-lg font-semibold mb-2">Directions, That Matter!</p>
-                        <h2 class="text-3xl lg:text-4xl font-bold">Digital Freight That Saves Your Time!</h2>
-                    </div>
-                </div>
-                <!-- End .col-lg-5-->
-                <div class="w-full lg:w-6/12 lg:ml-auto">
-                    <div class="text-white">
-                        <p class="mb-6">We pride ourselves on providing the best transport and shipping services
-                            available all over the world. Our skilled personnel, utilizing communications, tracking and
-                            processing software, combined with decades of experience! Through integrated supply chain
-                            solutions, Equita drives sustainable competitive advantages to some of Australia's largest
-                            companies.</p>
-                        <ul class="list-none space-y-3">
-                            <li class="flex items-center text-sm"><i class="fas fa-check-circle mr-2"></i> Quality
-                                Control System</li>
-                            <li class="flex items-center text-sm"><i class="fas fa-check-circle mr-2"></i> Unrivaled
-                                workmanship</li>
-                            <li class="flex items-center text-sm"><i class="fas fa-check-circle mr-2"></i> 100%
-                                Satisfaction Guarantee</li>
-                            <li class="flex items-center text-sm"><i class="fas fa-check-circle mr-2"></i> Accurate
-                                Testing Processes</li>
-                            <li class="flex items-center text-sm"><i class="fas fa-check-circle mr-2"></i> Highly
-                                Professional Staff</li>
-                            <li class="flex items-center text-sm"><i class="fas fa-check-circle mr-2"></i>
-                                Professional and Qualified</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- End .col-lg-6-->
-            </div>
-            <!-- End .row-->
-            <div class="mt-12">
-                <div class="flex flex-wrap">
-                    <div class="w-full lg:w-6/12">
-                        <div class="relative">
-                            <div class="absolute inset-0 bg-cover bg-center"
-                                style="background-image: url('{{ asset('images/cta/1.jpg') }}');"></div>
-                            <div class="relative p-6 bg-black bg-opacity-50">
-                                <div class="text-white">
-                                    <div class="text-2xl mb-4"><i class="flaticon-015-scale"></i></div>
-                                    <h3 class="text-xl font-semibold mb-4">Affordable Price, Certified Forwarders</h3>
-                                    <a href="javascript:void(0)" class="text-white hover:text-gray-300"><i
-                                            class="icon-arrow-right"></i></a>
+                <div class="col-12 col-lg-6">
+                    <div class="panels-container">
+                        <div class="panel-action">
+                            <div class="panel-content">
+                                <div class="panel-icon"><i class="flaticon-015-scale"></i></div>
+                                <div class="panel-heading">
+                                    <h6>Affordable Price, Certified Forwarders</h6>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-full lg:w-6/12">
-                        <div class="relative">
-                            <div class="absolute inset-0 bg-cover bg-center"
-                                style="background-image: url('{{ asset('images/cta/1.jpg') }}');"></div>
-                            <div class="relative p-6 bg-black bg-opacity-50">
-                                <div class="text-white">
-                                    <div class="text-2xl mb-4"><i class="flaticon-017-pallet"></i></div>
-                                    <h3 class="text-xl font-semibold mb-4">Affordable Price, Certified Forwarders</h3>
-                                    <a href="javascript:void(0)" class="text-white hover:text-gray-300"><i
-                                            class="icon-arrow-right"></i></a>
+                        <div class="panel-action">
+                            <div class="panel-content">
+                                <div class="panel-icon"><i class="flaticon-017-pallet"></i></div>
+                                <div class="panel-heading">
+                                    <h6>Affordable Price, Certified Forwarders</h6>
                                 </div>
                             </div>
                         </div>
@@ -403,255 +132,704 @@
         <!-- End .container-->
     </section>
 
-    <section class="py-20">
-        <div class="cases-standard">
-            <div class="container mx-auto px-4 py-8">
-                <div class="text-center mb-12">
-                    <p class="text-lg text-gray-600">Explore Recent Works</p>
-                    <h2 class="text-3xl font-semibold text-gray-900">Featured Projects</h2>
+    <section class="about about-2" id="about-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-7">
+                    <div class="heading heading-3">
+                        <p class="heading-subtitle">Providing Full Range Of Transportation Worldwide.</p>
+                        <h2 class="heading-title">Reliable Logistic & Transport Solutions Saves Your Time!</h2>
+                    </div>
+                    <div class="about-block">
+                        <div class="row">
+                            <div class="col-12 col-lg-7">
+                                <div class="block-left">
+                                    <p>Equita Group is a representative logistics operator providing full range of
+                                        service in the sphere of customs clearance transportation worldwide for any
+                                        cargo</p>
+                                    <p>We pride ourselves on providing the best transport and shipping services
+                                        available allover the world. Our skilled personnel, utilising the latest
+                                        communications, tracking and combined with experience through integrated supply
+                                        chain solutions!</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-5">
+                                <div class="block-right">
+                                    <div class="detail">
+                                        <h6>quality </h6>
+                                        <p>Following the quality of our service thus having gained trust of our many
+                                            clients.</p>
+                                    </div>
+                                    <div class="detail">
+                                        <h6>rellability</h6>
+                                        <p>We provide with cargo safety throughout all the stages of our delivery
+                                            process..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="signature-block">
+                        <div class="signature-body">
+                            <h6>john peter</h6>
+                            <p>founder</p>
+                        </div><img src="{{ asset('') }}images/signature/1.png" alt="signature" />
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <div class="relative">
-                            <img src="{{ asset('images/cta/1.jpg') }}" alt="work Item Image"
-                                class="w-full h-56 object-cover">
+                <!-- End .col-lg-6-->
+                <div class="col-12 col-lg-5">
+                    <div class="about-img">
+                        <div class="about-img-warp bg-overlay">
+                            <div class="bg-section"><img class="img-fluid"
+                                    src="{{ asset('') }}images/about/1.jpg" alt="about Image" /></div>
                         </div>
-                        <div class="p-4">
-                            <h4 class="text-xl font-semibold text-gray-900">
-                                <a href="case-study-single.html">Floride Chemical Factory</a>
-                            </h4>
-                            <div class="text-sm text-gray-600 mt-2">
-                                <a href="javascript:void(0)" class="text-blue-500">Analytics</a>
-                                <a href="javascript:void(0)" class="text-blue-500 ml-2">Optimization</a>
+                        <div class="counter">
+                            <div class="counter-icon"> <i class="flaticon-018-packaging"></i></div>
+                            <div class="counter-num"> <span class="counting">9,612</span>
+                                <p>m</p>
                             </div>
-                            <p class="text-gray-600 mt-2">We understand that data is the greatest asset when it comes
-                                to analyzing and optimizing your supply chain performance.</p>
-                            <div class="mt-4">
-                                <a href="case-study-single.html" class="text-blue-500 inline-flex items-center">
-                                    <span>Explore Case Study</span>
-                                    <i class="icon-arrow-right ml-2"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <div class="relative">
-                            <img src="{{ asset('images/cta/1.jpg') }}" alt="work Item Image"
-                                class="w-full h-56 object-cover">
-                        </div>
-                        <div class="p-4">
-                            <h4 class="text-xl font-semibold text-gray-900">
-                                <a href="case-study-single.html">Warehouse Inventory</a>
-                            </h4>
-                            <div class="text-sm text-gray-600 mt-2">
-                                <a href="javascript:void(0)" class="text-blue-500">Warehousing</a>
-                                <a href="javascript:void(0)" class="text-blue-500 ml-2">Distribution</a>
-                            </div>
-                            <p class="text-gray-600 mt-2">Cost savings is crucial, innovative technology minimizes your
-                                overall spend by utilizing a schedule.</p>
-                            <div class="mt-4">
-                                <a href="case-study-single.html" class="text-blue-500 inline-flex items-center">
-                                    <span>Explore Case Study</span>
-                                    <i class="icon-arrow-right ml-2"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <div class="relative">
-                            <img src="{{ asset('images/cta/1.jpg') }}" alt="work Item Image"
-                                class="w-full h-56 object-cover">
-                        </div>
-                        <div class="p-4">
-                            <h4 class="text-xl font-semibold text-gray-900">
-                                <a href="case-study-single.html">Minimize Manufacturing</a>
-                            </h4>
-                            <div class="text-sm text-gray-600 mt-2">
-                                <a href="javascript:void(0)" class="text-blue-500">Logistics</a>
-                                <a href="javascript:void(0)" class="text-blue-500 ml-2">Analytics</a>
-                            </div>
-                            <p class="text-gray-600 mt-2">Our group has been building relationships and projects that
-                                last, serving an impressive list of long-term clients.</p>
-                            <div class="mt-4">
-                                <a href="case-study-single.html" class="text-blue-500 inline-flex items-center">
-                                    <span>Explore Case Study</span>
-                                    <i class="icon-arrow-right ml-2"></i>
-                                </a>
+                            <div class="counter-name">
+                                <h6>delivered goods</h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- End .row-->
         </div>
-
-        <div class="clients-carousel pt-0">
-            <div class="container mx-auto px-4 py-8">
-                <div class="text-center mb-12">
-                    <p class="text-lg text-gray-600">Join Us Today</p>
-                    <h2 class="text-3xl font-semibold text-gray-900">Our Partners</h2>
-                    <p class="text-gray-600 mt-4">Our skilled personnel, utilizing the latest communications, tracking,
-                        and processing software, combined with decades of experience! Through integrated supply chain
-                        solutions, Equita drives sustainable competitive advantages to some of Australia's largest
-                        companies.</p>
-                </div>
-                <div class="owl-carousel flex space-x-6 overflow-x-auto py-4">
-                    <div class="client">
-                        <img src="{{ asset('images/cta/1.jpg') }}" alt="client" class="h-12">
-                    </div>
-                    <div class="client">
-                        <img src="{{ asset('images/cta/1.jpg') }}" alt="client" class="h-12">
-                    </div>
-                    <div class="client">
-                        <img src="{{ asset('images/cta/1.jpg') }}" alt="client" class="h-12">
-                    </div>
-                    <div class="client">
-                        <img src="{{ asset('images/cta/1.jpg') }}" alt="client" class="h-12">
-                    </div>
-                    <div class="client">
-                        <img src="{{ asset('images/cta/1.jpg') }}" alt="client" class="h-12">
-                    </div>
-                    <div class="client">
-                        <img src="{{ asset('images/cta/1.jpg') }}" alt="client" class="h-12">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- End .container-->
     </section>
 
-    <section class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="row mb-10 text-center">
-                <div class="col-12 col-lg-6 mx-auto">
-                    <div class="text-center">
-                        <p class="text-lg text-gray-600">insight and trends</p>
-                        <h2 class="text-3xl font-bold text-gray-900">recent articles</h2>
-                        <p class="text-gray-600 mt-2">Follow our latest news and thoughts which focuses exclusively on
+    <section class="services services-2 bg-gray" id="services-2">
+        <div class="bg-section"><img src="{{ asset('') }}images/background/map-pattern.png" alt="map-img" />
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                    <div class="heading text--center">
+                        <p class="heading-subtitle">Safe & Reliable Cargo Solutions!</p>
+                        <h2 class="heading-title">Managing Logistics For World’s Multinational Companies.</h2>
+                    </div>
+                </div>
+                <!-- End .col-lg-6-->
+            </div>
+            <!-- End .row-->
+            <div class="row services-container">
+                <div class=" col-12 col-md-6 col-lg-4">
+                    <div class="service-panel">
+                        <div class="service-panel-container">
+                            <div class="service-img"><a href="javascript:void(0)"></a><img
+                                    src="{{ asset('') }}images/services/1.jpg" alt="service img" /></div>
+                            <!-- End .work-img-->
+                            <div class="service-content">
+                                <div class="service-title">
+                                    <h4><a href="javascript:void(0)">air freight</a></h4>
+                                </div>
+                                <div class="service-desc">
+                                    <p>We can provide with the comprehensive service in the sphere of urgent, valuable,
+                                        fragile or any cargoes conscientious.</p>
+                                </div>
+                                <div class="service-list">
+                                    <ul class="list-unstyled">
+                                        <li> <a href="javascript:void(0)"><i
+                                                    class="fas fa-check-circle"></i><span>quality control
+                                                    system</span></a></li>
+                                        <li> <a><i class="fas fa-check-circle"></i><span>100% satisfaction
+                                                    guarantee</span></a></li>
+                                        <li> <a><i class="fas fa-check-circle"></i><span>highly professional
+                                                    staff</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
+                                            class="icon-arrow-right"></i><span>read more</span></a></div>
+                            </div>
+                            <!-- End .work-content -->
+                        </div>
+                        <!-- End .work-item-container-->
+                    </div>
+                </div>
+                <div class=" col-12 col-md-6 col-lg-4">
+                    <div class="service-panel">
+                        <div class="service-panel-container">
+                            <div class="service-img"><a href="javascript:void(0)"></a><img
+                                    src="{{ asset('') }}images/services/2.jpg" alt="service img" /></div>
+                            <!-- End .work-img-->
+                            <div class="service-content">
+                                <div class="service-title">
+                                    <h4><a href="javascript:void(0)">ocean freight</a></h4>
+                                </div>
+                                <div class="service-desc">
+                                    <p>We provides with the main types of basic sea transportation is implemented by our
+                                        partners’ vessels.</p>
+                                </div>
+                                <div class="service-list">
+                                    <ul class="list-unstyled">
+                                        <li> <a href="javascript:void(0)"><i
+                                                    class="fas fa-check-circle"></i><span>unrivalled
+                                                    workmanship</span></a></li>
+                                        <li> <a><i class="fas fa-check-circle"></i><span>accurate testing
+                                                    processes</span></a></li>
+                                        <li> <a><i class="fas fa-check-circle"></i><span>professional &amp;
+                                                    qualified</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
+                                            class="icon-arrow-right"></i><span>read more</span></a></div>
+                            </div>
+                            <!-- End .work-content -->
+                        </div>
+                        <!-- End .work-item-container-->
+                    </div>
+                </div>
+                <div class=" col-12 col-md-6 col-lg-4">
+                    <div class="service-panel">
+                        <div class="service-panel-container">
+                            <div class="service-img"><a href="javascript:void(0)"></a><img
+                                    src="{{ asset('') }}images/services/3.jpg" alt="service img" /></div>
+                            <!-- End .work-img-->
+                            <div class="service-content">
+                                <div class="service-title">
+                                    <h4><a href="javascript:void(0)">road freight</a></h4>
+                                </div>
+                                <div class="service-desc">
+                                    <p>We provides with the main types of basic sea transportation is implemented by our
+                                        partners’ vessels.</p>
+                                </div>
+                                <div class="service-list">
+                                    <ul class="list-unstyled">
+                                        <li> <a href="javascript:void(0)"><i
+                                                    class="fas fa-check-circle"></i><span>commercial
+                                                    expertise</span></a></li>
+                                        <li> <a><i class="fas fa-check-circle"></i><span>sustanabillity
+                                                    goals</span></a></li>
+                                        <li> <a><i class="fas fa-check-circle"></i><span>logistical
+                                                    expertise</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="service-more"><a class="btn" href="javascript:void(0)"> <i
+                                            class="icon-arrow-right"></i><span>read more</span></a></div>
+                            </div>
+                            <!-- End .work-content -->
+                        </div>
+                        <!-- End .work-item-container-->
+                    </div>
+                </div>
+            </div>
+            <!-- End .row-->
+        </div>
+        <!-- End .container-->
+    </section>
+
+    <section class="cta cta-2 cta-4 bg-overlay bg-overlay-theme" id="cta-4">
+        <div class="bg-section"><img src="{{ asset('') }}images/cta/1.jpg" alt="background" /></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-5">
+                    <div class="heading heading-2 heading-light">
+                        <p class="heading-subtitle">Directions, That Matter!</p>
+                        <h2 class="heading-title">Digital Freight That Saves Your Time!</h2>
+                    </div>
+                </div>
+                <!--End .col-lg-6-->
+                <div class="col-12 col-lg-6 offset-lg-1">
+                    <div class="prief-set prief-set-2">
+                        <p>We pride ourselves on providing the best transport and shipping services available allover
+                            the world. Our skilled personnal and processing software, combined with decades of
+                            experience! Through integrated supply chain solutions, Equita drives sustainable competitive
+                            advantages to some of Australia's largest companies.</p>
+                        <ul class="advantages-list">
+                            <li><i class="fas fa-check-circle"></i> Quality Control System</li>
+                            <li><i class="fas fa-check-circle"></i> Unrivalled workmanship</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Satisfaction Guarantee</li>
+                            <li><i class="fas fa-check-circle"></i> Accurate Testing Processes</li>
+                            <li><i class="fas fa-check-circle"></i> Highly Professional Staff</li>
+                            <li><i class="fas fa-check-circle"></i> Professional and Qualified</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End .col-lg-6-->
+                <div class="col-12">
+                    <div class="contact-panel contact-panel-2">
+                        <div class="contact-types"> <a class="button quote-btn" href="javascript:void(0)"
+                                data-form="quoteFormActive"> <i class="flaticon-020-order"> </i><span>request a
+                                    quote</span></a><a class="button track-btn active" href="javascript:void(0)"
+                                data-form="trackFormActive"> <i class="flaticon-009-shipping-1"> </i><span>track &amp;
+                                    trace</span></a></div>
+                        <div class="contact-card">
+                            <div class="contact-body trackFormActive">
+                                <div class="row">
+                                    <div class="col-12 col-lg-8">
+                                        <form class="contactForm quote-form mb-0" method="post"
+                                            action="{{ asset('') }}php/contact.php">
+                                            <h5 class="card-heading">personal data</h5>
+                                            <div class="row">
+                                                <div class="col-12 col-md-12 col-lg-4">
+                                                    <input class="form-control" type="text" name="contact-name"
+                                                        placeholder="Name" required="" />
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <input class="form-control" type="text" name="contact-email"
+                                                        placeholder="Email" required="" />
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <input class="form-control" type="text" name="contact-phone"
+                                                        placeholder="Phone" required="" />
+                                                </div>
+                                            </div>
+                                            <h5 class="card-heading">shipment data</h5>
+                                            <div class="row">
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="select-container">
+                                                        <select class="form-control">
+                                                            <option value="default">freight type</option>
+                                                            <option value="AL">freight type 1</option>
+                                                            <option value="AK">freight type 2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <input class="form-control" type="text" name="contact-city"
+                                                        placeholder="city of departure" required="" />
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <input class="form-control" type="text"
+                                                        name="contact-destination" placeholder="delivery city"
+                                                        required="" />
+                                                </div>
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="select-container">
+                                                        <select class="form-control">
+                                                            <option value="default">incoterms</option>
+                                                            <option value="AL">incoterms 1</option>
+                                                            <option value="AK">incoterms 2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-2">
+                                                    <input class="form-control" type="text" name="contact-weight"
+                                                        placeholder="weight" required="" />
+                                                </div>
+                                                <div class="col-12 col-md-2">
+                                                    <input class="form-control" type="text" name="contact-height"
+                                                        placeholder="height" required="" />
+                                                </div>
+                                                <div class="col-12 col-md-2">
+                                                    <input class="form-control" type="text" name="contact-width"
+                                                        placeholder="width" required="" />
+                                                </div>
+                                                <div class="col-12 col-md-2">
+                                                    <input class="form-control" type="text" name="contact-length"
+                                                        placeholder="length" required="" />
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="custom-radio-group">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio"
+                                                                id="customRadioInline1" name="customRadioInline1" />
+                                                            <label for="customRadioInline1">fragile</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio"
+                                                                id="customRadioInline2" name="customRadioInline1" />
+                                                            <label for="customRadioInline2">express delivery</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio"
+                                                                id="customRadioInline3" name="customRadioInline1" />
+                                                            <label for="customRadioInline3">insurance</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio"
+                                                                id="customRadioInline4" name="customRadioInline1" />
+                                                            <label for="customRadioInline4">packaging</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input class="btn btn--secondary btn--block" type="submit"
+                                                        value="Request A Quote" />
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="contact-result"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <form class="contactForm track-form mb-0" method="post"
+                                            action="{{ asset('') }}php/contact.php">
+                                            <h5 class="card-heading">personal data</h5>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="select-container">
+                                                        <select class="form-control">
+                                                            <option value="default">shipment type</option>
+                                                            <option value="AL">type 1</option>
+                                                            <option value="AK">type 2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-heading">tracking number</h5>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <textarea class="form-control" name="contact-tracking-number" cols="30" rows="2"
+                                                        placeholder="You can enter up to a maximum of 10 airway bill numbers for tracking." required=""></textarea>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="custom-radio-group">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio"
+                                                                id="customRadioInline5" name="customRadioInline1" />
+                                                            <label for="customRadioInline5">fragile</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio"
+                                                                id="customRadioInline6" name="customRadioInline1" />
+                                                            <label for="customRadioInline6">express delivery</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio"
+                                                                id="customRadioInline7" name="customRadioInline1" />
+                                                            <label for="customRadioInline7">insurance</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio"
+                                                                id="customRadioInline8" name="customRadioInline1" />
+                                                            <label for="customRadioInline8">packaging</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input class="btn btn--secondary btn--block" type="submit"
+                                                        value="Track &amp; Trace" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <div class="apply-card widget widget-reservation"><img
+                                                src="{{ asset('') }}images/contact/1.jpg" alt="image" />
+                                            <div class="widget-content">
+                                                <h5>take your carreer to next level</h5>
+                                                <p>We pride ourselves on providing the best transport & shipping
+                                                    services available all over the world and there is no one comes
+                                                    close to us. </p><a class="btn btn--white"
+                                                    href="javascript:void(0)"><i class="icon-arrow-right"></i>apply
+                                                    now!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End .contact-body -->
+                        </div>
+                    </div>
+                    <!-- End .contact-panel-->
+                </div>
+                <!-- End .col-lg-6-->
+            </div>
+            <!-- End .row-->
+        </div>
+        <!-- End .container-->
+    </section>
+
+    <section class="testimonial testimonial-1 testimonial-2 bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="carousel owl-carousel carousel-dots" data-slide="2" data-slide-rs="1"
+                        data-autoplay="false" data-nav="false" data-dots="false" data-space="40" data-loop="true"
+                        data-speed="800">
+                        <div class="testimonial-panel">
+                            <div class="testimonial-panel-warp">
+                                <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
+                                <div class="testimonial-body">
+                                    <div class="testimonial-img"><img
+                                            src="{{ asset('') }}images/testimonial/3.jpg"
+                                            alt="Testimonial Author" /></div>
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
+                                        <p>Equita Logistics International customer service is some of the best we have
+                                            ever had with ocean we like to ship as much as possible with you all.</p>
+                                        <div class="testimonial-meta">
+                                            <h4>John R Peter</h4>
+                                            <p>movein</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-panel">
+                            <div class="testimonial-panel-warp">
+                                <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
+                                <div class="testimonial-body">
+                                    <div class="testimonial-img"><img
+                                            src="{{ asset('') }}images/testimonial/4.jpg"
+                                            alt="Testimonial Author" /></div>
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
+                                        <p>Equita Logistics International customer service is some of the best we have
+                                            ever had with ocean we like to ship as much as possible with you all.</p>
+                                        <div class="testimonial-meta">
+                                            <h4>James Wane</h4>
+                                            <p>Aleko Company</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-panel">
+                            <div class="testimonial-panel-warp">
+                                <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
+                                <div class="testimonial-body">
+                                    <div class="testimonial-img"><img
+                                            src="{{ asset('') }}images/testimonial/3.jpg"
+                                            alt="Testimonial Author" /></div>
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
+                                        <p>Equita Logistics International customer service is some of the best we have
+                                            ever had with ocean we like to ship as much as possible with you all.</p>
+                                        <div class="testimonial-meta">
+                                            <h4>Marko Smith</h4>
+                                            <p>Aify Agency</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-panel">
+                            <div class="testimonial-panel-warp">
+                                <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
+                                <div class="testimonial-body">
+                                    <div class="testimonial-img"><img
+                                            src="{{ asset('') }}images/testimonial/4.jpg"
+                                            alt="Testimonial Author" /></div>
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
+                                        <p>Equita Logistics International customer service is some of the best we have
+                                            ever had with ocean we like to ship as much as possible with you all.</p>
+                                        <div class="testimonial-meta">
+                                            <h4>Marko Smith</h4>
+                                            <p>movein</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-panel">
+                            <div class="testimonial-panel-warp">
+                                <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
+                                <div class="testimonial-body">
+                                    <div class="testimonial-img"><img
+                                            src="{{ asset('') }}images/testimonial/3.jpg"
+                                            alt="Testimonial Author" /></div>
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
+                                        <p>Equita Logistics International customer service is some of the best we have
+                                            ever had with ocean we like to ship as much as possible with you all.</p>
+                                        <div class="testimonial-meta">
+                                            <h4>Marko Smith</h4>
+                                            <p>Aleko Company</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-panel">
+                            <div class="testimonial-panel-warp">
+                                <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
+                                <div class="testimonial-body">
+                                    <div class="testimonial-img"><img
+                                            src="{{ asset('') }}images/testimonial/4.jpg"
+                                            alt="Testimonial Author" /></div>
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i><i
+                                                class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
+                                        <p>Equita Logistics International customer service is some of the best we have
+                                            ever had with ocean we like to ship as much as possible with you all.</p>
+                                        <div class="testimonial-meta">
+                                            <h4>Marko Smith</h4>
+                                            <p>Aify Agency</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End .row-->
+        </div>
+        <!-- End .container-->
+    </section>
+    <hr />
+
+    <section class="clients clients-carousel clients-1 bg-gray" id="clients-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="carousel owl-carousel" data-slide="6" data-slide-rs="2" data-autoplay="true"
+                        data-nav="false" data-dots="false" data-space="0" data-loop="true" data-speed="3000">
+                        <div class="client"><img src="{{ asset('') }}images/clients/1.png" alt="client" />
+                        </div>
+                        <div class="client"><img src="{{ asset('') }}images/clients/2.png" alt="client" />
+                        </div>
+                        <div class="client"><img src="{{ asset('') }}images/clients/3.png" alt="client" />
+                        </div>
+                        <div class="client"><img src="{{ asset('') }}images/clients/4.png" alt="client" />
+                        </div>
+                        <div class="client"><img src="{{ asset('') }}images/clients/5.png" alt="client" />
+                        </div>
+                        <div class="client"><img src="{{ asset('') }}images/clients/6.png" alt="client" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End .row-->
+        </div>
+        <!-- End .container-->
+    </section>
+
+    <section class="cta cta-5 bg-overlay" id="cta-5">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="heading heading-8 heading-light">
+                    <p class="heading-subtitle">Dedicated Customer Teams & An Agile Services</p>
+                    <h2 class="heading-title">Global Logistics Partner To World’s Famous Brands!!</h2>
+                    <p class="heading-desc">Equita Group is a representative logistics operator providing full range of
+                        service in the sphere of customs clearance transportation worldwide.</p>
+                    <div class="icon-set icon-set2">
+                        <div class="icon-panel"> <i class="icon flaticon-016-payment-terminal"></i><span>transparent
+                                pricing</span></div>
+                        <div class="icon-panel"> <i class="icon flaticon-014-box-3"></i><span>fast, effecient
+                                delivery</span></div>
+                        <div class="icon-panel"> <i class="icon flaticon-001-scale-1"></i><span>warehouse
+                                storage</span></div>
+                    </div>
+                    <p class="heading-desc">We pride ourselves on providing the best transport and shipping services
+                        available allover the world. Our skilled personnel, utilising the latest communications,
+                        tracking and combined with experience through integrated supply chain solutions!</p>
+                </div>
+            </div>
+            <!--End .col-lg-6-->
+            <div class="col-12 col-lg-6">
+                <div class="video video-1" id="video1">
+                    <div class="bg-section"><img src="{{ asset('') }}images/video/4.jpg" alt="background" />
+                    </div>
+                    <div class="player"><a class="popup-video" href="https://www.youtube.com/watch?v=7e90gBu4pas"> <i
+                                class="fas fa-play"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- End .row-->
+    </section>
+
+    <section class="blog blog-grid" id="blog-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 offset-lg-3">
+                    <div class="heading heading-7 text-center">
+                        <p class="heading-subtitle">insight and trends</p>
+                        <h2 class="heading-title">recent articles</h2>
+                        <p class="heading-desc">Follow our latest news and thoughts which focuses exclusively on
                             insight, industry trends, top news headlines.</p>
                     </div>
                 </div>
             </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <div class="relative">
-                        <a href="blog-single.html">
-                            <img src="{{ asset('images/cta/1.jpg') }}"
-                                alt="Importers achieve cost savings through the First Sale rule!"
-                                class="w-full h-56 object-cover">
-                        </a>
-                    </div>
-                    <div class="p-4">
-                        <div class="text-sm text-gray-600 mb-2">
-                            <a href="javascript:void(0)" class="text-blue-500">cargo</a>
-                            <a href="javascript:void(0)" class="text-blue-500 ml-2">insights</a>
-                        </div>
-                        <h4 class="text-xl font-semibold text-gray-900">
-                            <a href="blog-single.html">Importers achieve cost savings through the First Sale rule!</a>
-                        </h4>
-                        <div class="text-sm text-gray-500 mt-2">
-                            <span class="text-gray-500">jan 20</span><span class="ml-1">2021</span>
-                        </div>
-                        <div class="text-gray-600 mt-2">
-                            <p>The trade war currently ensuing between the nations around the globe, fiercely with
-                                China, shows no signs of the first set of tariffs levied against solar...</p>
-                        </div>
-                        <div class="mt-4">
-                            <a href="javascript:void(0)" class="text-blue-500">Read more</a>
+            <!-- End .row-->
+            <div class="row">
+                <div class=" col-12 col-md-6 col-lg-4">
+                    <div class="blog-entry">
+                        <div class="entry-img"><a href="blog-single.html"><img
+                                    src="{{ asset('') }}images/blog/grid/1.jpg"
+                                    alt="Importers achieve cost savings through the First Sale rule!" /></a></div>
+                        <!-- End .entry-img-->
+                        <!-- End .entry-date-->
+                        <div class="entry-content">
+                            <div class="entry-category"><a href="javascript:void(0)">cargo</a><a
+                                    href="javascript:void(0)">insights</a>
+                            </div>
+                            <div class="entry-title">
+                                <h4><a href="blog-single.html">Importers achieve cost savings through the First Sale
+                                        rule!</a></h4>
+                            </div>
+                            <div class="entry-date"><span class="month">jan 20</span><span
+                                    class="date">2021</span></div>
+                            <div class="entry-bio">
+                                <p>The trade war currently ensuing between the nations around the globe, fiercely with
+                                    China, shows no signs of the first set of tariffs levied against solar...</p>
+                            </div>
+                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
                         </div>
                     </div>
+                    <!-- End .entry-content-->
                 </div>
-
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <div class="relative">
-                        <a href="blog-single.html">
-                            <img src="{{ asset('images/cta/1.jpg') }}"
-                                alt="Cargo flow through better supply chain visibility, control."
-                                class="w-full h-56 object-cover">
-                        </a>
-                    </div>
-                    <div class="p-4">
-                        <div class="text-sm text-gray-600 mb-2">
-                            <a href="javascript:void(0)" class="text-blue-500">warehouse</a>
-                            <a href="javascript:void(0)" class="text-blue-500 ml-2">construction</a>
-                        </div>
-                        <h4 class="text-xl font-semibold text-gray-900">
-                            <a href="blog-single.html">Cargo flow through better supply chain visibility, control.</a>
-                        </h4>
-                        <div class="text-sm text-gray-500 mt-2">
-                            <span class="text-gray-500">jan 23</span><span class="ml-1">2021</span>
-                        </div>
-                        <div class="text-gray-600 mt-2">
-                            <p>Global provider connected products for consumers, and enterprises worldwide, supply chain
-                                control is everything, provide visibility and traceability needed for...</p>
-                        </div>
-                        <div class="mt-4">
-                            <a href="javascript:void(0)" class="text-blue-500">Read more</a>
+                <div class=" col-12 col-md-6 col-lg-4">
+                    <div class="blog-entry">
+                        <div class="entry-img"><a href="blog-single.html"><img
+                                    src="{{ asset('') }}images/blog/grid/2.jpg"
+                                    alt="Cargo flow through better supply chain visibility, control." /></a></div>
+                        <!-- End .entry-img-->
+                        <!-- End .entry-date-->
+                        <div class="entry-content">
+                            <div class="entry-category"><a href="javascript:void(0)">warehouse</a><a
+                                    href="javascript:void(0)">construction</a>
+                            </div>
+                            <div class="entry-title">
+                                <h4><a href="blog-single.html">Cargo flow through better supply chain visibility,
+                                        control.</a></h4>
+                            </div>
+                            <div class="entry-date"><span class="month">jan 23</span><span
+                                    class="date">2021</span></div>
+                            <div class="entry-bio">
+                                <p>Global provider connected products for consumers, and enterprises worldwide, supply
+                                    chain control is everything, provide visibility and traceability needed for...</p>
+                            </div>
+                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
                         </div>
                     </div>
+                    <!-- End .entry-content-->
                 </div>
-
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <div class="relative">
-                        <a href="blog-single.html">
-                            <img src="{{ asset('images/cta/1.jpg') }}"
-                                alt="Importance of specialized focus in Projects, Oil &amp; Gas Logistics?"
-                                class="w-full h-56 object-cover">
-                        </a>
-                    </div>
-                    <div class="p-4">
-                        <div class="text-sm text-gray-600 mb-2">
-                            <a href="javascript:void(0)" class="text-blue-500">logistics</a>
-                            <a href="javascript:void(0)" class="text-blue-500 ml-2">distribution</a>
+                <div class=" col-12 col-md-6 col-lg-4">
+                    <div class="blog-entry">
+                        <div class="entry-img"><a href="blog-single.html"><img
+                                    src="{{ asset('') }}images/blog/grid/3.jpg"
+                                    alt="Importance of specialized focus in Projects, Oil &amp; Gas Logistics?" /></a>
                         </div>
-                        <h4 class="text-xl font-semibold text-gray-900">
-                            <a href="blog-single.html">Importance of specialized focus in Projects, Oil &amp; Gas
-                                Logistics?</a>
-                        </h4>
-                        <div class="text-sm text-gray-500 mt-2">
-                            <span class="text-gray-500">jan 24</span><span class="ml-1">2021</span>
-                        </div>
-                        <div class="text-gray-600 mt-2">
-                            <p>Our team provides skilled &amp; experienced managers who know the intricacies of this
-                                vertical and focus on providing solutions in Oil &amp; Gas sector...</p>
-                        </div>
-                        <div class="mt-4">
-                            <a href="javascript:void(0)" class="text-blue-500">Read more</a>
+                        <!-- End .entry-img-->
+                        <!-- End .entry-date-->
+                        <div class="entry-content">
+                            <div class="entry-category"><a href="javascript:void(0)">logistics</a><a
+                                    href="javascript:void(0)">distrbution</a>
+                            </div>
+                            <div class="entry-title">
+                                <h4><a href="blog-single.html">Importance of specialized focus in Projects, Oil &amp;
+                                        Gas Logistics?</a></h4>
+                            </div>
+                            <div class="entry-date"><span class="month">jan 24</span><span
+                                    class="date">2021</span></div>
+                            <div class="entry-bio">
+                                <p>Our team provides skilled &amp; experienced managers who know the intricacies of this
+                                    vertical and focus on providing solutions in Oil &amp; Gas sector...</p>
+                            </div>
+                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
                         </div>
                     </div>
+                    <!-- End .entry-content-->
                 </div>
             </div>
+            <!-- End .row-->
         </div>
+        <!-- End .container-->
     </section>
-
-    <section class="h-[720px] py-[90px] relative">
-        <iframe class="absolute top-0 left-0 right-0 w-full h-full grayscale"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.993900465211!2d106.88179397499079!3d-6.264531293724123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3983391f0d5%3A0x7daf648df7b98565!2sBerlian%20Ground%20Support%20-%20Aviation%20Support%20Specialist!5e0!3m2!1sen!2sid!4v1732042610922!5m2!1sen!2sid"
-            width="600" height="450" style="border:0;" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="Berlian Ground Support Location">
-        </iframe>
-        <div class="container mx-auto flex justify-end relative z-10 mt-[90px]">
-            <!-- Added relative positioning for content visibility -->
-            <div class="w-[330px] p-8 rounded bg-white shadow-md"> <!-- Added bg-white and shadow for contrast -->
-                <h4 class="text-lg font-semibold mb-4">Berlian Ground Support - Aviation Support Specialist</h4>
-                <div class="mb-2 flex items-start">
-                    <i class="fas fa-map-marker-alt text-gray-500 mr-2"></i> <!-- Example icon -->
-                    <p class="text-gray-700">Jl. Halim Perdana Kusuma No.30, Halim Perdana Kusumah, Kec. Makasar, Kota
-                        Jakarta Timur, Daerah Khusus Ibukota Jakarta 13610</p>
-                </div>
-                <div class="mb-2 flex items-start">
-                    <i class="fas fa-clock text-gray-500 mr-2"></i> <!-- Example icon -->
-                    <p class="text-gray-700">Open 24 hours</p>
-                </div>
-                <div class="mb-2 flex items-start">
-                    <i class="fas fa-envelope text-gray-500 mr-2"></i> <!-- Example icon -->
-                    <p class="text-gray-700">sales@berlianflightsupport.com</p>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-phone text-gray-500 mr-2"></i> <!-- Example icon -->
-                    <p class="text-gray-700">0811-1999-9727</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
 </x-main-layout>

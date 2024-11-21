@@ -14,6 +14,36 @@ class MainController extends Controller
         return view ('index');
     }
 
+    public function about()
+    {
+        return view ('main.about');
+    }
+
+    public function service()
+    {
+        return view ('main.service');
+    }
+
+    public function gallery()
+    {
+        return view ('main.gallery');
+    }
+
+    public function blog()
+    {
+        return view ('main.blog');
+    }
+
+    public function contact()
+    {
+        return view ('main.contact');
+    }
+
+    public function quote()
+    {
+        return view ('main.quote');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
