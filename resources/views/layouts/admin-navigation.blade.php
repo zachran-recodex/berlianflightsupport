@@ -12,32 +12,32 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                        {{ __('Home') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('admin.heroSections.index')" :active="request()->routeIs('admin.heroSections.index')">
+                        {{ __('Hero Section') }}
                     </x-nav-link>
                     <x-nav-link :href="route('admin.abouts.index')" :active="request()->routeIs('admin.abouts.index')">
                         {{ __('About') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('admin.services.index')" :active="request()->routeIs('admin.services.index')">
+                        {{ __('Service') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('admin.galleries.index')" :active="request()->routeIs('admin.galleries.index')">
+                        {{ __('Gallery') }}
                     </x-nav-link>
                     <x-nav-link :href="route('admin.blogs.index')" :active="request()->routeIs('admin.blogs.index')">
                         {{ __('Blog') }}
                     </x-nav-link>
                     <x-nav-link :href="route('admin.contacts.index')" :active="request()->routeIs('admin.contacts.index')">
-                        {{ __('Contact') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('admin.heroSections.index')" :active="request()->routeIs('admin.heroSections.index')">
-                        {{ __('Hero Section') }}
+                        {{ __('Contact and Quote') }}
                     </x-nav-link>
                     <x-nav-link :href="route('admin.pageSetups.index')" :active="request()->routeIs('admin.pageSetups.index')">
                         {{ __('Page Setup') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('admin.services.index')" :active="request()->routeIs('admin.services.index')">
-                        {{ __('Service') }}
-                    </x-nav-link>
                     <x-nav-link :href="route('admin.settings.index')" :active="request()->routeIs('admin.settings.index')">
                         {{ __('Setting') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('admin.galleries.index')" :active="request()->routeIs('admin.galleries.index')">
-                        {{ __('Gallery') }}
                     </x-nav-link>
                 </div>
             </div>

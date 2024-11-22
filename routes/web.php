@@ -13,6 +13,8 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
 
 Route::get('/', [MainController::class, 'index'])->name('home');
+Route::post('/send/quote', [MainController::class, 'indexQuoteStore'])->name('home.quote.store');
+Route::post('/send/contact', [MainController::class, 'indexContactStore'])->name('home.contact.store');
 Route::get('/about', [MainController::class, 'about'])->name('about');
 Route::get('/services', [MainController::class, 'service'])->name('service');
 Route::get('/services/{slug}', [MainController::class, 'serviceDetail'])->name('service.detail');
@@ -43,7 +45,12 @@ Route::middleware('auth')->group(function () {
         });
 
         Route::middleware('can:manage contacts')->group(function () {
+            // Rute resource untuk Contact
             Route::resource('contacts', ContactController::class);
+
+            // Rute manual untuk Quote (karena mungkin tidak ingin menggunakan resource controller untuk Quote)
+            Route::get('/quotes/{quote}', [ContactController::class, 'showQuote'])->name('quotes.show');
+            Route::delete('/quotes/{quote}', [ContactController::class, 'destroyQuote'])->name('quotes.destroy');
         });
 
         Route::middleware('can:manage heroSections')->group(function () {

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Ayman Fikry" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Multi-purpose Business html5 template" />
+    <meta name="description" content="Berlian Flight Support" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Berlian Flight Support</title>
@@ -60,11 +60,6 @@
 
         {{ $slot }}
 
-        <!--
-        ============================
-        Footer #1
-        ============================
-        -->
         <footer class="footer footer-1">
             <div class="footer-top">
                 <div class="container">

@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\About;
+use App\Models\Quote;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Service;
 use App\Models\HeroSection;
 use Illuminate\Http\Request;
+use App\Http\Requests\QuoteStoreRequest;
 use App\Http\Requests\ContactStoreRequest;
 
 class MainController extends Controller
@@ -26,6 +28,37 @@ class MainController extends Controller
 
         // Kirim data ke view
         return view('index', compact('heroSections', 'services', 'about', 'blogs'));
+    }
+
+    public function indexQuoteStore(QuoteStoreRequest $request)
+    {
+        $quote = new Quote();
+
+        // Update fields with request data
+        $quote->name = $request->name;
+        $quote->email = $request->email;
+        $quote->phone = $request->phone;
+        $quote->message = $request->message;
+        $quote->service_id = $request->service_id;
+
+        $quote->save();
+
+        return redirect()->back()->with('success', 'Your quote has been sent successfully!');
+    }
+
+    public function indexContactStore(ContactStoreRequest $request)
+    {
+        $contact = new Contact();
+
+        // Update fields with request data
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->phone = $request->phone;
+        $contact->message = $request->message;
+
+        $contact->save();
+
+        return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }
 
     public function about()

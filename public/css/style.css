@@ -2989,7 +2989,7 @@ ul.list-icons li i {
 }
 
 #back-to-top:hover {
-    background-color: #c81a06;
+    background-color: #dfbe28;
 }
 
 #back-to-top.show {
@@ -13271,8 +13271,8 @@ ul.dropdown-menu > li.has-dropdown > a:before {
 .footer .widget-newsletter .widget-content .form-newsletter .btn:hover,
 .footer .widget-newsletter .widget-content .form-newsletter .btn:active,
 .footer .widget-newsletter .widget-content .form-newsletter .btn:focus {
-    background-color: #c81a06;
-    border-color: #c81a06;
+    background-color: #dfbe28;
+    border-color: #dfbe28;
 }
 
 .footer .widget-links ul {

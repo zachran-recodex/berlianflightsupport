@@ -25,8 +25,8 @@
 
                                         <!-- Buttons -->
                                         <div class="slide-buttons">
-                                            <a class="btn btn--primary" href="javascript:void(0)">Learn More</a>
-                                            <a class="btn btn--white" href="javascript:void(0)">Contact Us</a>
+                                            <a class="btn btn--primary" href="{{ route('about') }}">Learn More</a>
+                                            <a class="btn btn--white" href="{{ route('contact') }}">Contact Us</a>
                                         </div>
                                     </div>
                                     <!-- End .slide-content -->
@@ -65,7 +65,8 @@
                     <div class="data">
                         <div class="data-icon"><i class="flaticon-034-call-center"></i></div>
                         <div class="data-body">
-                            <h6>quick contact </h6><a href="mailto::Equita@7oroof.com">Equita@7oroof.com</a><a
+                            <h6>quick contact </h6><a
+                                href="mailto::ops@berlianflightsupport.com">ops@berlianflightsupport.com</a><a
                                 href="tel:01061245741">(002) 01061245741</a>
                         </div>
                     </div>
@@ -74,8 +75,11 @@
                     <div class="data">
                         <div class="data-icon"><i class="flaticon-036-address-book"></i></div>
                         <div class="data-body">
-                            <h6>our location</h6><a href="javascript:void(0)">2307 Beverley Rd Brooklyn, New York 11226
-                                United States.</a>
+                            <h6>our location</h6>
+                            <a href="javascript:void(0)">
+                                Graha Dirgantara, Jl. Raya Protokol Halim Perdanakusuma No.8
+                                2nd Floor Unit H
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -83,9 +87,9 @@
                     <div class="panels-container">
                         <div class="panel-action">
                             <div class="panel-content">
-                                <div class="panel-icon"><i class="flaticon-015-scale"></i></div>
+                                <div class="panel-icon"><i class="flaticon-035-plane"></i></div>
                                 <div class="panel-heading">
-                                    <h6>Affordable Price, Certified Forwarders</h6>
+                                    <h6>Quality</h6>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +97,7 @@
                             <div class="panel-content">
                                 <div class="panel-icon"><i class="flaticon-017-pallet"></i></div>
                                 <div class="panel-heading">
-                                    <h6>Affordable Price, Certified Forwarders</h6>
+                                    <h6>Safety</h6>
                                 </div>
                             </div>
                         </div>
@@ -161,8 +165,8 @@
                             </div>
                         </div>
                         <div class="counter">
-                            <div class="counter-icon"> <i class="flaticon-018-packaging"></i></div>
-                            <div class="counter-num"> <span class="counting">100</span>
+                            <div class="counter-icon"> <i class="flaticon-035-plane"></i></div>
+                            <div class="counter-num"> <span>100</span>
                                 <p>%</p>
                             </div>
                             <div class="counter-name">
@@ -287,148 +291,78 @@
                             <div class="contact-body trackFormActive">
                                 <div class="row">
                                     <div class="col-12 col-lg-8">
-                                        <form class="contactForm quote-form mb-0" method="post"
-                                            action="{{ asset('') }}php/contact.php">
-                                            <h5 class="card-heading">personal data</h5>
+                                        <form class="contactForm quote-form mb-0" method="POST"
+                                            action="{{ route('home.quote.store') }}">
+                                            @csrf
+                                            <h5 class="card-heading">Personal Data</h5>
                                             <div class="row">
                                                 <div class="col-12 col-md-12 col-lg-4">
-                                                    <input class="form-control" type="text" name="contact-name"
-                                                        placeholder="Name" required="" />
+                                                    <input class="form-control" type="text" name="name"
+                                                        id="name" placeholder="Name" required>
                                                 </div>
                                                 <div class="col-12 col-md-6 col-lg-4">
-                                                    <input class="form-control" type="text" name="contact-email"
-                                                        placeholder="Email" required="" />
+                                                    <input class="form-control" type="email" name="email"
+                                                        id="email" placeholder="Email" required>
                                                 </div>
                                                 <div class="col-12 col-md-6 col-lg-4">
-                                                    <input class="form-control" type="text" name="contact-phone"
-                                                        placeholder="Phone" required="" />
+                                                    <input class="form-control" type="text" name="phone"
+                                                        id="phone" placeholder="Phone" required>
                                                 </div>
                                             </div>
-                                            <h5 class="card-heading">shipment data</h5>
+                                            <h5 class="card-heading">Send Message</h5>
                                             <div class="row">
-                                                <div class="col-12 col-lg-4">
-                                                    <div class="select-container">
-                                                        <select class="form-control">
-                                                            <option value="default">freight type</option>
-                                                            <option value="AL">freight type 1</option>
-                                                            <option value="AK">freight type 2</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-md-6 col-lg-4">
-                                                    <input class="form-control" type="text" name="contact-city"
-                                                        placeholder="city of departure" required="" />
-                                                </div>
-                                                <div class="col-12 col-md-6 col-lg-4">
-                                                    <input class="form-control" type="text"
-                                                        name="contact-destination" placeholder="delivery city"
-                                                        required="" />
-                                                </div>
-                                                <div class="col-12 col-lg-4">
-                                                    <div class="select-container">
-                                                        <select class="form-control">
-                                                            <option value="default">incoterms</option>
-                                                            <option value="AL">incoterms 1</option>
-                                                            <option value="AK">incoterms 2</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-md-2">
-                                                    <input class="form-control" type="text" name="contact-weight"
-                                                        placeholder="weight" required="" />
-                                                </div>
-                                                <div class="col-12 col-md-2">
-                                                    <input class="form-control" type="text" name="contact-height"
-                                                        placeholder="height" required="" />
-                                                </div>
-                                                <div class="col-12 col-md-2">
-                                                    <input class="form-control" type="text" name="contact-width"
-                                                        placeholder="width" required="" />
-                                                </div>
-                                                <div class="col-12 col-md-2">
-                                                    <input class="form-control" type="text" name="contact-length"
-                                                        placeholder="length" required="" />
+                                                <div class="col-12">
+                                                    <textarea class="form-control" name="message" id="message" cols="30" rows="2" placeholder="Message"
+                                                        required></textarea>
                                                 </div>
                                                 <div class="col-12">
+                                                    <h6 class="card-heading">Select a Service</h6>
                                                     <div class="custom-radio-group">
-                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio"
-                                                                id="customRadioInline1" name="customRadioInline1" />
-                                                            <label for="customRadioInline1">fragile</label>
-                                                        </div>
-                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio"
-                                                                id="customRadioInline2" name="customRadioInline1" />
-                                                            <label for="customRadioInline2">express delivery</label>
-                                                        </div>
-                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio"
-                                                                id="customRadioInline3" name="customRadioInline1" />
-                                                            <label for="customRadioInline3">insurance</label>
-                                                        </div>
-                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio"
-                                                                id="customRadioInline4" name="customRadioInline1" />
-                                                            <label for="customRadioInline4">packaging</label>
-                                                        </div>
+                                                        @foreach ($services as $service)
+                                                            <div
+                                                                class="custom-control custom-radio custom-control-inline">
+                                                                <input class="custom-control-input" type="radio"
+                                                                    id="service{{ $service->id }}" name="service_id"
+                                                                    value="{{ $service->id }}" required>
+                                                                <label
+                                                                    for="service{{ $service->id }}">{{ $service->title }}</label>
+                                                            </div>
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
-                                                    <input class="btn btn--secondary btn--block" type="submit"
-                                                        value="Request A Quote" />
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="contact-result"></div>
+                                                    <button class="btn btn--secondary btn--block"
+                                                        type="submit">Request A Quote</button>
                                                 </div>
                                             </div>
                                         </form>
-                                        <form class="contactForm track-form mb-0" method="post"
-                                            action="{{ asset('') }}php/contact.php">
+
+                                        <form class="contactForm track-form mb-0" method="POST"
+                                            action="{{ route('home.contact.store') }}">
+                                            @csrf
                                             <h5 class="card-heading">personal data</h5>
                                             <div class="row">
-                                                <div class="col-12">
-                                                    <div class="select-container">
-                                                        <select class="form-control">
-                                                            <option value="default">shipment type</option>
-                                                            <option value="AL">type 1</option>
-                                                            <option value="AK">type 2</option>
-                                                        </select>
-                                                    </div>
+                                                <div class="col-12 col-md-12 col-lg-4">
+                                                    <input class="form-control" type="text" name="name"
+                                                        id="name" placeholder="Name">
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <input class="form-control" type="text" name="email"
+                                                        id="email" placeholder="Email">
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <input class="form-control" type="text" name="phone"
+                                                        id="phone" placeholder="Phone">
                                                 </div>
                                             </div>
-                                            <h5 class="card-heading">tracking number</h5>
+                                            <h5 class="card-heading">Send Message</h5>
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <textarea class="form-control" name="contact-tracking-number" cols="30" rows="2"
-                                                        placeholder="You can enter up to a maximum of 10 airway bill numbers for tracking." required=""></textarea>
+                                                    <textarea class="form-control" name="message" id="message" cols="30" rows="2" placeholder="message"></textarea>
                                                 </div>
                                                 <div class="col-12">
-                                                    <div class="custom-radio-group">
-                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio"
-                                                                id="customRadioInline5" name="customRadioInline1" />
-                                                            <label for="customRadioInline5">fragile</label>
-                                                        </div>
-                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio"
-                                                                id="customRadioInline6" name="customRadioInline1" />
-                                                            <label for="customRadioInline6">express delivery</label>
-                                                        </div>
-                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio"
-                                                                id="customRadioInline7" name="customRadioInline1" />
-                                                            <label for="customRadioInline7">insurance</label>
-                                                        </div>
-                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio"
-                                                                id="customRadioInline8" name="customRadioInline1" />
-                                                            <label for="customRadioInline8">packaging</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <input class="btn btn--secondary btn--block" type="submit"
-                                                        value="Track &amp; Trace" />
+                                                    <button class="btn btn--secondary btn--block" type="submit">Send
+                                                        Message</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -437,12 +371,14 @@
                                         <div class="apply-card widget widget-reservation"><img
                                                 src="{{ asset('') }}images/contact/1.jpg" alt="image" />
                                             <div class="widget-content">
-                                                <h5>take your carreer to next level</h5>
-                                                <p>We pride ourselves on providing the best transport & shipping
-                                                    services available all over the world and there is no one comes
-                                                    close to us. </p><a class="btn btn--white"
-                                                    href="javascript:void(0)"><i class="icon-arrow-right"></i>apply
-                                                    now!</a>
+                                                <h5>Our Vision</h5>
+                                                <p>
+                                                    {{ $about->vision }}
+                                                </p>
+                                                <a class="btn btn--white" href="{{ route('service') }}">
+                                                    <i class="icon-arrow-right"></i>
+                                                    Learn More
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

@@ -551,4 +551,14 @@
 
     $('select').niceSelect();
 
+    /* ------------------  CONTACT FORM TOGGLE ------------------ */
+    $('.contact-types .button').click(function() {
+        if ($('.contact-card .contact-body').hasClass($(this).data('form'))) {
+            return false
+        }
+        $(this).siblings('.button').removeClass('active')
+        $(this).addClass('active')
+        $('.contact-card .contact-body').toggleClass('trackFormActive quoteFormActive');
+    })
+
 }(jQuery));
