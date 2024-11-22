@@ -7,10 +7,10 @@
 	4.  MOBILE MENU
 	5.  HEADER FIXED
 	6.  HEADER STATIC
-	7.  COUNTER UP              
-	8.  COUNTDOWN DATE  
+	7.  COUNTER UP
+	8.  COUNTDOWN DATE
 	9.  AJAX MAILCHIMP
-	10. AJAX CAMPAIGN MONITOR 
+	10. AJAX CAMPAIGN MONITOR
 	11. OWL CAROUSEL
 	12. MAGNIFIC POPUP
 	13. MAGNIFIC POPUP VIDEO
@@ -18,7 +18,7 @@
 	15. GALLERY FLITER
 	16. WORK FLITER
 	17. PROGRESS BAR
-	18. AJAX CONTACT FORM       
+	18. AJAX CONTACT FORM
 	19. LOAD MORE
 	20. ACCORDIONS
     21. SELECT BOX
@@ -123,7 +123,7 @@
     $('.cart-box , .module-cart .module-icon , .module-search .form-search , .module-sidearea .module-sidearea-wrap').click(function(e) {
         e.stopPropagation();
     });
-    
+
     /* ------------------  MOBILE MENU ------------------ */
 
     var $dropToggle = $("[data-toggle='dropdown']");
@@ -528,28 +528,6 @@
         });
     });
 
-    /* ------------------  AJAX CONTACT FORM  ------------------ */
-
-    var contactForm = $(".contactForm"),
-        contactResult = $('.contact-result');
-    contactForm.validate({
-        debug: false,
-        submitHandler: function(contactForm) {
-            $(contactResult, contactForm).html('Please Wait...');
-            $.ajax({
-                type: "POST",
-                url: "assets/php/contact.php",
-                data: $(contactForm).serialize(),
-                timeout: 20000,
-                success: function(msg) {
-                    $(contactResult, contactForm).html('<div class="alert alert-success" role="alert"><strong>Thank you. We will contact you shortly.</strong></div>').delay(3000).fadeOut(2000);
-                },
-                error: $('.thanks').show()
-            });
-            return false;
-        }
-    });
-
     /* ------------------ LOAD MORE ------------------ */
 
     $("#loadMore").on("click", function(e) {
@@ -572,16 +550,5 @@
     /* ------------------  SELECT BOX ------------------ */
 
     $('select').niceSelect();
-
-    /* ------------------  CONTACT FORM TOGGLE ------------------ */
-
-    $('.contact-types .button').click(function() {
-        if ($('.contact-card .contact-body').hasClass($(this).data('form'))) {
-            return false
-        }
-        $(this).siblings('.button').removeClass('active')
-        $(this).addClass('active')
-        $('.contact-card .contact-body').toggleClass('trackFormActive quoteFormActive');
-    })
 
 }(jQuery));
