@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Gallery;
 use App\Models\Service;
 use App\Models\HeroSection;
@@ -17,16 +18,18 @@ class MainController extends Controller
         // Ambil semua data hero section
         $heroSections = HeroSection::all();
         $services = Service::all();
+        $about = About::first();
 
         // Kirim data ke view
-        return view('index', compact('heroSections', 'services'));
+        return view('index', compact('heroSections', 'services', 'about'));
     }
 
     public function about()
     {
         $services = Service::all();
+        $about = About::first();
 
-        return view ('main.about', compact('services'));
+        return view ('main.about', compact('services', 'about'));
     }
 
     public function service()

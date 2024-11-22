@@ -110,33 +110,35 @@
             <div class="row">
                 <div class="col-12 col-lg-7">
                     <div class="heading heading-3">
-                        <p class="heading-subtitle">Providing Full Range Of Transportation Worldwide.</p>
-                        <h2 class="heading-title">Reliable Logistic & Transport Solutions Saves Your Time!</h2>
+                        <p class="heading-subtitle">About Us</p>
+                        <h2 class="heading-title">{{ $about->title }}</h2>
                     </div>
                     <div class="about-block">
                         <div class="row">
-                            <div class="col-12 col-lg-7">
+                            <div class="col-12 col-lg-9">
                                 <div class="block-left">
-                                    <p>Equita Group is a representative logistics operator providing full range of
-                                        service in the sphere of customs clearance transportation worldwide for any
-                                        cargo</p>
-                                    <p>We pride ourselves on providing the best transport and shipping services
-                                        available allover the world. Our skilled personnel, utilising the latest
-                                        communications, tracking and combined with experience through integrated supply
-                                        chain solutions!</p>
+                                    <p>{!! $about->description !!}</p>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-5">
+                            <div class="col-12 col-lg-3">
                                 <div class="block-right">
                                     <div class="detail">
-                                        <h6>quality </h6>
-                                        <p>Following the quality of our service thus having gained trust of our many
-                                            clients.</p>
+                                        <h6>Safety</h6>
                                     </div>
                                     <div class="detail">
-                                        <h6>rellability</h6>
-                                        <p>We provide with cargo safety throughout all the stages of our delivery
-                                            process..</p>
+                                        <h6>Quality</h6>
+                                    </div>
+                                    <div class="detail">
+                                        <h6>Innovation</h6>
+                                    </div>
+                                    <div class="detail">
+                                        <h6>Employees</h6>
+                                    </div>
+                                    <div class="detail">
+                                        <h6>Respect</h6>
+                                    </div>
+                                    <div class="detail">
+                                        <h6>Enthusiasm</h6>
                                     </div>
                                 </div>
                             </div>
@@ -144,25 +146,27 @@
                     </div>
                     <div class="signature-block">
                         <div class="signature-body">
-                            <h6>john peter</h6>
-                            <p>founder</p>
-                        </div><img src="{{ asset('') }}images/signature/1.png" alt="signature" />
+                            <h6>{{ $about->director_name }}</h6>
+                            <p>Director</p>
+                        </div>
                     </div>
                 </div>
                 <!-- End .col-lg-6-->
                 <div class="col-12 col-lg-5">
                     <div class="about-img">
                         <div class="about-img-warp bg-overlay">
-                            <div class="bg-section"><img class="img-fluid" src="{{ asset('') }}images/about/1.jpg"
-                                    alt="about Image" /></div>
+                            <div class="bg-section">
+                                <img class="img-fluid" src="{{ asset('storage/' . $about->image) }}"
+                                    alt="{{ $about->title }}" />
+                            </div>
                         </div>
                         <div class="counter">
                             <div class="counter-icon"> <i class="flaticon-018-packaging"></i></div>
-                            <div class="counter-num"> <span class="counting">9,612</span>
-                                <p>m</p>
+                            <div class="counter-num"> <span class="counting">100</span>
+                                <p>%</p>
                             </div>
                             <div class="counter-name">
-                                <h6>delivered goods</h6>
+                                <h6>Quality & Safety</h6>
                             </div>
                         </div>
                     </div>
@@ -174,14 +178,14 @@
     </section>
 
     <section class="services services-2 bg-gray" id="services-2">
-        <div class="bg-section"><img src="{{ asset('') }}images/background/map-pattern.png" alt="map-img" />
+        <div class="bg-section"><img src="{{ asset('images/background/map-pattern.png') }}" alt="map-img" />
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
                     <div class="heading text--center">
-                        <p class="heading-subtitle">Safe & Reliable Cargo Solutions!</p>
-                        <h2 class="heading-title">Managing Logistics For World’s Multinational Companies.</h2>
+                        <p class="heading-subtitle">Our Services</p>
+                        <h2 class="heading-title">Providing Comprehensive Flight & Ground Support Solutions.</h2>
                     </div>
                 </div>
                 <!-- End .col-lg-6-->
@@ -189,7 +193,7 @@
             <!-- End .row-->
             <div class="row services-container">
                 @forelse ($services as $service)
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-3">
                         <div class="service-panel">
                             <div class="service-panel-container">
                                 <div class="service-img">
@@ -200,13 +204,15 @@
                                 <!-- End .work-img-->
                                 <div class="service-content">
                                     <div class="service-title">
-                                        <h4><a
-                                                href="{{ route('service.detail', $service->slug) }}">{{ $service->title }}</a>
+                                        <h4>
+                                            <a href="{{ route('service.detail', $service->slug) }}">
+                                                {{ $service->title }}
+                                            </a>
                                         </h4>
                                     </div>
                                     <div class="service-desc">
                                         <p>
-                                            {!! Str::limit($service->description, 20) !!}
+                                            {!! Str::limit($service->description, 50) !!}
                                         </p>
                                     </div>
                                     <div class="service-more">
@@ -239,13 +245,13 @@
     </section>
 
     <section class="cta cta-2 cta-4 bg-overlay bg-overlay-theme" id="cta-4">
-        <div class="bg-section"><img src="{{ asset('') }}images/cta/1.jpg" alt="background" /></div>
+        <div class="bg-section"><img src="{{ asset('images/cta/1.jpg') }}" alt="background" /></div>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-5">
                     <div class="heading heading-2 heading-light">
-                        <p class="heading-subtitle">Directions, That Matter!</p>
-                        <h2 class="heading-title">Digital Freight That Saves Your Time!</h2>
+                        <p class="heading-subtitle">Know Who We Are</p>
+                        <h2 class="heading-title">Complete Flight Support Solutions</h2>
                     </div>
                 </div>
                 <!--End .col-lg-6-->
@@ -256,23 +262,27 @@
                             experience! Through integrated supply chain solutions, Equita drives sustainable competitive
                             advantages to some of Australia's largest companies.</p>
                         <ul class="advantages-list">
-                            <li><i class="fas fa-check-circle"></i> Quality Control System</li>
-                            <li><i class="fas fa-check-circle"></i> Unrivalled workmanship</li>
-                            <li><i class="fas fa-check-circle"></i> 100% Satisfaction Guarantee</li>
-                            <li><i class="fas fa-check-circle"></i> Accurate Testing Processes</li>
-                            <li><i class="fas fa-check-circle"></i> Highly Professional Staff</li>
-                            <li><i class="fas fa-check-circle"></i> Professional and Qualified</li>
+                            @forelse ($services as $service)
+                                <li><i class="fas fa-check-circle"></i> {{ $service->title }}</li>
+                            @empty
+                                <li><i class="fas fa-check-circle"></i> No Services</li>
+                            @endforelse
                         </ul>
                     </div>
                 </div>
                 <!--End .col-lg-6-->
                 <div class="col-12">
                     <div class="contact-panel contact-panel-2">
-                        <div class="contact-types"> <a class="button quote-btn" href="javascript:void(0)"
-                                data-form="quoteFormActive"> <i class="flaticon-020-order"> </i><span>request a
-                                    quote</span></a><a class="button track-btn active" href="javascript:void(0)"
-                                data-form="trackFormActive"> <i class="flaticon-009-shipping-1"> </i><span>track &amp;
-                                    trace</span></a></div>
+                        <div class="contact-types">
+                            <a class="button quote-btn" href="javascript:void(0)" data-form="quoteFormActive">
+                                <i class="flaticon-020-order"></i>
+                                <span>Request A Quote</span>
+                            </a>
+                            <a class="button track-btn active" href="javascript:void(0)" data-form="trackFormActive">
+                                <i class="flaticon-009-shipping-1"> </i>
+                                <span>Contact Us</span>
+                            </a>
+                        </div>
                         <div class="contact-card">
                             <div class="contact-body trackFormActive">
                                 <div class="row">
@@ -622,21 +632,28 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="heading heading-8 heading-light">
-                    <p class="heading-subtitle">Dedicated Customer Teams & An Agile Services</p>
-                    <h2 class="heading-title">Global Logistics Partner To World’s Famous Brands!!</h2>
-                    <p class="heading-desc">Equita Group is a representative logistics operator providing full range of
-                        service in the sphere of customs clearance transportation worldwide.</p>
+                    <p class="heading-subtitle">About Us</p>
+                    <h2 class="heading-title">Our Excellence Portfolio</h2>
+                    <p class="heading-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sunt amet hic, illum placeat
+                        aut, consequuntur dolore laboriosam quam commodi suscipit illo quo. Expedita alias fuga,
+                        repellat sunt ipsa corporis.
+                    </p>
                     <div class="icon-set icon-set2">
-                        <div class="icon-panel"> <i class="icon flaticon-016-payment-terminal"></i><span>transparent
-                                pricing</span></div>
-                        <div class="icon-panel"> <i class="icon flaticon-014-box-3"></i><span>fast, effecient
-                                delivery</span></div>
-                        <div class="icon-panel"> <i class="icon flaticon-001-scale-1"></i><span>warehouse
-                                storage</span></div>
+                        <div class="icon-panel">
+                            <i class="icon flaticon-016-payment-terminal"></i>
+                            <span>AD-HOC</span>
+                        </div>
+                        <div class="icon-panel">
+                            <i class="icon flaticon-014-box-3"></i>
+                            <span>Corporate</span>
+                        </div>
                     </div>
-                    <p class="heading-desc">We pride ourselves on providing the best transport and shipping services
-                        available allover the world. Our skilled personnel, utilising the latest communications,
-                        tracking and combined with experience through integrated supply chain solutions!</p>
+                    <p class="heading-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eveniet perferendis laudantium
+                        at veniam possimus, facilis distinctio velit rem voluptate dignissimos eos vel inventore culpa
+                        aspernatur eius! Accusantium, dignissimos eligendi!
+                    </p>
                 </div>
             </div>
             <!--End .col-lg-6-->
@@ -657,8 +674,8 @@
             <div class="row">
                 <div class="col-12 col-lg-6 offset-lg-3">
                     <div class="heading heading-7 text-center">
-                        <p class="heading-subtitle">insight and trends</p>
-                        <h2 class="heading-title">recent articles</h2>
+                        <p class="heading-subtitle">Aviation</p>
+                        <h2 class="heading-title">recent Blogs</h2>
                         <p class="heading-desc">Follow our latest news and thoughts which focuses exclusively on
                             insight, industry trends, top news headlines.</p>
                     </div>
@@ -668,77 +685,33 @@
             <div class="row">
                 <div class=" col-12 col-md-6 col-lg-4">
                     <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/1.jpg"
-                                    alt="Importers achieve cost savings through the First Sale rule!" /></a></div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">cargo</a><a
-                                    href="javascript:void(0)">insights</a>
-                            </div>
-                            <div class="entry-title">
-                                <h4><a href="blog-single.html">Importers achieve cost savings through the First Sale
-                                        rule!</a></h4>
-                            </div>
-                            <div class="entry-date"><span class="month">jan 20</span><span
-                                    class="date">2021</span></div>
-                            <div class="entry-bio">
-                                <p>The trade war currently ensuing between the nations around the globe, fiercely with
-                                    China, shows no signs of the first set of tariffs levied against solar...</p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
-                        </div>
-                    </div>
-                    <!-- End .entry-content-->
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/2.jpg"
-                                    alt="Cargo flow through better supply chain visibility, control." /></a></div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">warehouse</a><a
-                                    href="javascript:void(0)">construction</a>
-                            </div>
-                            <div class="entry-title">
-                                <h4><a href="blog-single.html">Cargo flow through better supply chain visibility,
-                                        control.</a></h4>
-                            </div>
-                            <div class="entry-date"><span class="month">jan 23</span><span
-                                    class="date">2021</span></div>
-                            <div class="entry-bio">
-                                <p>Global provider connected products for consumers, and enterprises worldwide, supply
-                                    chain control is everything, provide visibility and traceability needed for...</p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
-                        </div>
-                    </div>
-                    <!-- End .entry-content-->
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/3.jpg"
-                                    alt="Importance of specialized focus in Projects, Oil &amp; Gas Logistics?" /></a>
+                        <div class="entry-img">
+                            <a href="blog-single.html">
+                                <img src="{{ asset('') }}images/blog/grid/1.jpg"
+                                    alt="Importers achieve cost savings through the First Sale rule!" />
+                            </a>
                         </div>
                         <!-- End .entry-img-->
                         <!-- End .entry-date-->
                         <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">logistics</a><a
-                                    href="javascript:void(0)">distrbution</a>
+                            <div class="entry-category">
+                                <a href="javascript:void(0)">cargo</a><a href="javascript:void(0)">insights</a>
                             </div>
                             <div class="entry-title">
-                                <h4><a href="blog-single.html">Importance of specialized focus in Projects, Oil &amp;
-                                        Gas Logistics?</a></h4>
+                                <h4>
+                                    <a href="blog-single.html">
+                                        Importers achieve cost savings through the First Sale rule!
+                                    </a>
+                                </h4>
                             </div>
-                            <div class="entry-date"><span class="month">jan 24</span><span
-                                    class="date">2021</span></div>
+                            <div class="entry-date">
+                                <span class="month">jan 20</span><span class="date">2021</span>
+                            </div>
                             <div class="entry-bio">
-                                <p>Our team provides skilled &amp; experienced managers who know the intricacies of this
-                                    vertical and focus on providing solutions in Oil &amp; Gas sector...</p>
+                                <p>
+                                    The trade war currently ensuing between the nations around the globe, fiercely with
+                                    China, shows no signs of the first set of tariffs levied against solar...
+                                </p>
                             </div>
                             <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
                         </div>

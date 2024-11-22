@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
-use Illuminate\Http\Request;
+use App\Http\Requests\AboutStoreRequest;
 
 class AboutController extends Controller
 {
@@ -12,54 +12,35 @@ class AboutController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $about = About::first();
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+        return view('admin.abouts.index', compact('about'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(AboutStoreRequest $request)
     {
-        //
-    }
+        $about = About::first() ?? new About();
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(About $about)
-    {
-        //
-    }
+        $about->title = $request->title;
+        $about->description = $request->description;
+        $about->vision = $request->vision;
+        $about->mission = $request->mission;
+        $about->director_name = $request->director_name;
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(About $about)
-    {
-        //
-    }
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('storage/about'), $filename);
+            $about->image = 'about/' . $filename;
+        }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, About $about)
-    {
-        //
-    }
+        // Save the about record
+        $about->save();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(About $about)
-    {
-        //
+        return redirect()->route('admin.abouts.index')->with('success', 'About updated successfully');
     }
 }

@@ -70,17 +70,19 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-3 col-xl-4">
-                            <div class="footer-logo"><img class="footer-logo"
-                                    src="{{ asset('') }}images/logo/logo-light.png" alt="logo" /></div>
+                            <div class="footer-logo">
+                                <img class="footer-logo" src="{{ asset('') }}images/logo/logo-light.png"
+                                    alt="logo" />
+                            </div>
                         </div>
                         <div class="col-12 col-lg-9 col-xl-8">
                             <div class="widget-newsletter">
                                 <div class="widget-content">
-                                    <p>Sign up for industry alerts,<br />insights from Equita.</p>
+                                    <p>Subscribe for industry alerts, insights from Us.</p>
                                     <form class="form-newsletter mailchimp">
                                         <input class="form-control" type="email" name="email"
                                             placeholder="Your Email Address" />
-                                        <input class="btn btn--primary" type="submit" value="sign up!" />
+                                        <input class="btn btn--primary" type="submit" value="Subscribe" />
                                         <div class="subscribe-alert"></div>
                                     </form>
                                 </div>
@@ -94,17 +96,24 @@
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-3 footer-widget widget-about">
                             <div class="footer-widget-title">
-                                <h5>about</h5>
+                                <h5>Contact Us</h5>
                             </div>
                             <div class="widget-content">
-                                <p>Equita is a representative logistics operator providing full range of service in the
-                                    sphere of customs cargo and transportation worldwide.</p>
+                                <p>
+                                    We look forward to working with you
+                                </p>
                                 <!-- Start .module-social-->
-                                <div class="module module-social"><a class="share-facebook" href="javascript:void(0)"><i
-                                            class="fab fa-facebook-f"> </i></a><a class="share-instagram"
-                                        href="javascript:void(0)"><i class="fab fa-instagram"></i></a><a
-                                        class="share-twitter" href="javascript:void(0)"><i
-                                            class="fab fa-twitter"></i></a></div>
+                                <div class="module module-social">
+                                    <a class="share-facebook" href="javascript:void(0)">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a class="share-instagram" href="javascript:void(0)">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a class="share-twitter" href="javascript:void(0)">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
                                 <!-- End .module-social-->
                             </div>
                         </div>
@@ -167,8 +176,14 @@
             <div class="footer-bottom">
                 <div class="row">
                     <div class="col-md-12 col-md-12 text--center footer-copyright">
-                        <div class="copyright"><span>&copy; Equita, With Love by</span><a
-                                href="https://1.envato.market/kP9BV"> Zytheme.com</a></div>
+                        <div class="copyright">
+                            <span>&copy; Berlian Ground Support, With Love by</span>
+                            <a href="https://recodex.id"
+                                style="color: #86C332; text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#496e1d';" onmouseout="this.style.color='#86C332';">
+                                Recodex
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <!--  End .row-->

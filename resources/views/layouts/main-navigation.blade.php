@@ -1,8 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-sticky" id="primary-menu">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('home') }}">
-            <img class="logo logo-light" src="{{ asset('') }}images/logo/logo-light.png" alt="Equita Logo" />
-            <img class="logo logo-dark" src="{{ asset('') }}images/logo/logo-dark.png" alt="Equita Logo" />
+        <a href="{{ route('home') }}" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+            <img src="{{ asset('images/logo/logo-dark.png') }}" alt="Logo" style="width: 80px; height: 100%;">
+            <div>
+                <p style="margin: 0; font-size: 22px; font-weight: bold; color: #0c004f;">Berlian Flight Support</p>
+                <p style="margin: 0; font-size: 14px; color: #dfbe28;">Elevate Your Aviation Business</p>
+            </div>
         </a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarContent"
             aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">

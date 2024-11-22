@@ -7,16 +7,15 @@
                 <div class="col-12 col-lg-6">
                     <div class="title text-lg-left">
                         <div class="title-sub-heading">
-                            <p>Dedicated Customer Teams &amp; An Agile Services</p>
+                            <p>Elevate Your Aviation Business</p>
                         </div>
                         <div class="title-heading">
-                            <h1>Global Logistics Partner To World’s Famous Brands For Over 25 Years!</h1>
+                            <h1>Your Trusted Partner for Flight Support & Ground Handling Excellence!</h1>
                         </div>
                         <div class="clearfix"></div>
                         <ol class="breadcrumb justify-content-lg-start">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="">company</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">About US</li>
+                            <li class="breadcrumb-item active" aria-current="page">About Us</li>
                         </ol>
                     </div>
                     <!-- End .title -->
@@ -35,49 +34,53 @@
                 <div class="col-12 col-lg-5">
                     <div class="about-img about-img-left">
                         <div class="about-img-warp bg-overlay">
-                            <div class="bg-section"><img class="img-fluid" src="{{ asset('') }}images/about/1.jpg"
-                                    alt="about Image" /></div>
+                            <div class="bg-section">
+                                <img class="img-fluid" src="{{ asset('storage/' . $about->image) }}"
+                                    alt="{{ $about->title }}" />
+                            </div>
                         </div>
                         <div class="counter">
                             <div class="counter-icon"> <i class="flaticon-018-packaging"></i></div>
-                            <div class="counter-num"> <span class="counting">9,612</span>
-                                <p>m</p>
+                            <div class="counter-num"> <span class="counting">100</span>
+                                <p>%</p>
                             </div>
                             <div class="counter-name">
-                                <h6>delivered goods</h6>
+                                <h6>Quality & Safety</h6>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-7">
                     <div class="heading heading-3">
-                        <p class="heading-subtitle">Providing Full Range Of Transportation Worldwide.</p>
-                        <h2 class="heading-title">Reliable Logistic & Transport Solutions Saves Your Time!</h2>
+                        <p class="heading-subtitle">About Us</p>
+                        <h2 class="heading-title">{{ $about->title }}</h2>
                     </div>
                     <div class="about-block">
                         <div class="row">
-                            <div class="col-12 col-lg-7">
+                            <div class="col-12 col-lg-9">
                                 <div class="block-left">
-                                    <p>Equita Group is a representative logistics operator providing full range of
-                                        service in the sphere of customs clearance transportation worldwide for any
-                                        cargo</p>
-                                    <p>We pride ourselves on providing the best transport and shipping services
-                                        available allover the world. Our skilled personnel, utilising the latest
-                                        communications, tracking and combined with experience through integrated supply
-                                        chain solutions!</p>
+                                    <p>{!! $about->description !!}</p>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-5">
+                            <div class="col-12 col-lg-3">
                                 <div class="block-right">
                                     <div class="detail">
-                                        <h6>quality </h6>
-                                        <p>Following the quality of our service thus having gained trust of our many
-                                            clients.</p>
+                                        <h6>Safety</h6>
                                     </div>
                                     <div class="detail">
-                                        <h6>rellability</h6>
-                                        <p>We provide with cargo safety throughout all the stages of our delivery
-                                            process..</p>
+                                        <h6>Quality</h6>
+                                    </div>
+                                    <div class="detail">
+                                        <h6>Innovation</h6>
+                                    </div>
+                                    <div class="detail">
+                                        <h6>Employees</h6>
+                                    </div>
+                                    <div class="detail">
+                                        <h6>Respect</h6>
+                                    </div>
+                                    <div class="detail">
+                                        <h6>Enthusiasm</h6>
                                     </div>
                                 </div>
                             </div>
@@ -85,9 +88,9 @@
                     </div>
                     <div class="signature-block">
                         <div class="signature-body">
-                            <h6>john peter</h6>
-                            <p>founder</p>
-                        </div><img src="{{ asset('') }}images/signature/1.png" alt="signature" />
+                            <h6>{{ $about->director_name }}</h6>
+                            <p>Director</p>
+                        </div>
                     </div>
                 </div>
                 <!-- End .col-lg-6-->
@@ -102,26 +105,24 @@
             <div class="row">
                 <div class="col-12 col-lg-5">
                     <div class="heading heading-2 heading-light">
-                        <p class="heading-subtitle">Directions, That Matter!</p>
-                        <h2 class="heading-title">Digital Freight That Saves Your Time!</h2>
+                        <p class="heading-subtitle">Our Company</p>
+                        <h2 class="heading-title">Elevate Your Aviation Business</h2>
                     </div>
                 </div>
                 <!--End .col-lg-5-->
                 <div class="col-12 col-lg-6 offset-lg-1">
                     <div class="prief-set">
-                        <p>We pride ourselves on providing the best transport and shipping services available allover
-                            the world. Our skilled personnel, utilising communications, tracking and processing
-                            software, combined with decades of experience! Through integrated supply chain solutions,
-                            Equita drives sustainable competitive advantages to some of Australia's largest companies.
+                        <h2 style="font-size: 24px; font-weight: bold; color: #DFBE28; margin-bottom: 10px;">Our Vision
+                        </h2>
+                        <p>
+                            {{ $about->vision }}
                         </p>
-                        <ul class="advantages-list">
-                            <li><i class="fas fa-check-circle"></i> Quality Control System</li>
-                            <li><i class="fas fa-check-circle"></i> Unrivalled workmanship</li>
-                            <li><i class="fas fa-check-circle"></i> 100% Satisfaction Guarantee</li>
-                            <li><i class="fas fa-check-circle"></i> Accurate Testing Processes</li>
-                            <li><i class="fas fa-check-circle"></i> Highly Professional Staff</li>
-                            <li><i class="fas fa-check-circle"></i> Professional and Qualified</li>
-                        </ul>
+                        <h2
+                            style="font-size: 24px; font-weight: bold; color: #DFBE28; margin-top: 20px; margin-bottom: 10px;">
+                            Our Mission</h2>
+                        <p>
+                            {{ $about->mission }}
+                        </p>
                     </div>
                 </div>
                 <!--End .col-lg-6-->
@@ -190,7 +191,7 @@
                                             </div>
                                             <div class="case-desc">
                                                 <p>
-                                                    {!! Str::limit($service->description, 20) !!}
+                                                    {!! Str::limit($service->description, 50) !!}
                                                 </p>
                                             </div>
                                             <div class="case-more">
@@ -282,8 +283,8 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="heading heading-8 heading-light">
-                    <p class="heading-subtitle">Dedicated Customer Teams & An Agile Services</p>
-                    <h2 class="heading-title">Global Logistics Partner To World’s Famous Brands!!</h2>
+                    <p class="heading-subtitle">Excellence and Reliability</p>
+                    <h2 class="heading-title">Company Values</h2>
                     <p class="heading-desc">Equita Group is a representative logistics operator providing full range of
                         service in the sphere of customs clearance transportation worldwide.</p>
                     <div class="icon-set icon-set2">
