@@ -1,19 +1,10 @@
 <x-main-layout>
-    <!--
-      ============================
-      Google Maps Section
-      ============================
-      -->
     <section class="map map-2">
         <iframe class="map-gray"
             src="https://maps.google.com/maps?q=Pioneer%20Works&amp;t=m&amp;z=13&amp;output=embed&amp;iwloc=near"
             width="600" height="450" style="border:0;"></iframe>
     </section>
-    <!--
-      ============================
-      Contact Information Section
-      ============================
-      -->
+
     <section class="contact-info">
         <div class="container">
             <div class="row">
@@ -45,26 +36,28 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-8">
-                    <form class="contactForm" method="post" action="{{ asset('') }}php/contact.php">
+                    <form action="{{ route('contact.store') }}" method="POST" enctype="multipart/form-data"
+                        class="contactForm">
+                        @csrf
+
                         <div class="row">
                             <div class="col-12 col-lg-4">
-                                <input class="form-control" type="text" name="contact-name" placeholder="name"
-                                    required="" />
+                                <input class="form-control" type="text" name="name" id="name"
+                                    placeholder="name">
                             </div>
                             <div class="col-12 col-lg-4">
-                                <input class="form-control" type="text" name="contact-email" placeholder="email"
-                                    required="" />
+                                <input class="form-control" type="email" name="email" id="email"
+                                    placeholder="email">
                             </div>
                             <div class="col-12 col-lg-4">
-                                <input class="form-control" type="text" name="contact-website" placeholder="website"
-                                    required="" />
+                                <input class="form-control" type="tel" name="phone" id="phone"
+                                    placeholder="phone">
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control" name="contact-message" cols="30" rows="2" placeholder="message"
-                                    required=""></textarea>
+                                <textarea class="form-control" name="message" id="message" cols="30" rows="2" placeholder="message"></textarea>
                             </div>
                             <div class="col-12">
-                                <input class="btn btn--primary" type="submit" value="Submit" />
+                                <button class="btn btn--primary" type="submit">Submit</button>
                             </div>
                         </div>
                     </form>

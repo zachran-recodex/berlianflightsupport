@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
 use App\Models\Blog;
+use App\Models\About;
+use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Service;
 use App\Models\HeroSection;
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactStoreRequest;
 
 class MainController extends Controller
 {
@@ -79,6 +81,21 @@ class MainController extends Controller
     public function contact()
     {
         return view ('main.contact');
+    }
+
+    public function contactStore(ContactStoreRequest $request)
+    {
+        $contact = new Contact();
+
+        // Update fields with request data
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->phone = $request->phone;
+        $contact->message = $request->message;
+
+        $contact->save();
+
+        return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }
 
     public function quote()
