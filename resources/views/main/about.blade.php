@@ -1,3 +1,19 @@
+@section('meta_tag')
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{{ $pageSetups['about']->meta_description }}">
+    <meta name="keywords" content="{{ $pageSetups['about']->meta_keywords }}">
+    <meta name="author" content="Recodex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c004f">
+
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <title>{{ $pageSetups['about']->meta_title }}</title>
+@endsection
+
 <x-main-layout>
     <!-- Start #page-title-->
     <section class="page-title page-title-4 bg-overlay bg-overlay-dark bg-parallax" id="page-title">
@@ -133,7 +149,8 @@
                     <div class="col-12 col-lg-6">
                         <div class="action-panel">
                             <div class="action-panel-img">
-                                <div class="bg-section"><img src="{{ asset('') }}images/cta/2.jpg" alt="image" />
+                                <div class="bg-section"><img src="{{ asset('') }}images/cta/2.jpg"
+                                        alt="image" />
                                 </div>
                             </div>
                             <div class="action-panel-content">
@@ -147,7 +164,8 @@
                     <div class="col-12 col-lg-6">
                         <div class="action-panel">
                             <div class="action-panel-img">
-                                <div class="bg-section"><img src="{{ asset('') }}images/cta/3.jpg" alt="Image" />
+                                <div class="bg-section"><img src="{{ asset('') }}images/cta/3.jpg"
+                                        alt="Image" />
                                 </div>
                             </div>
                             <div class="action-panel-content inverted">

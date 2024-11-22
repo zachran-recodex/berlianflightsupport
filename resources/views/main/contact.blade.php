@@ -1,3 +1,19 @@
+@section('meta_tag')
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{{ $pageSetups['contact']->meta_description }}">
+    <meta name="keywords" content="{{ $pageSetups['contact']->meta_keywords }}">
+    <meta name="author" content="Recodex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c004f">
+
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <title>{{ $pageSetups['contact']->meta_title }}</title>
+@endsection
+
 <x-main-layout>
     <section class="map map-2">
         <iframe class="map-gray"

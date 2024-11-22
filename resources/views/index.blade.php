@@ -1,9 +1,25 @@
+@section('meta_tag')
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{{ $pageSetups['home']->meta_description }}">
+    <meta name="keywords" content="{{ $pageSetups['home']->meta_keywords }}">
+    <meta name="author" content="Recodex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c004f">
+
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <title>{{ $pageSetups['home']->meta_title }}</title>
+@endsection
+
 <x-main-layout>
     <section class="slider slider-2" id="slider-2">
         <div class="container-fluid pr-0 pl-0">
-            <div class="carousel owl-carousel custom-carousel carousel-navs carousel-dots" data-slide="1" data-slide-rs="1"
-                data-autoplay="false" data-nav="true" data-dots="true" data-space="0" data-loop="true" data-speed="800"
-                data-slider-id="#custom-carousel">
+            <div class="carousel owl-carousel custom-carousel carousel-navs carousel-dots" data-slide="1"
+                data-slide-rs="1" data-autoplay="false" data-nav="true" data-dots="true" data-space="0" data-loop="true"
+                data-speed="800" data-slider-id="#custom-carousel">
                 @forelse ($heroSections as $heroSection)
                     <!--  Start .slide-->
                     <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">

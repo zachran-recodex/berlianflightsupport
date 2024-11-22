@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PageSetupStoreRequest;
 use App\Models\PageSetup;
-use Illuminate\Http\Request;
 
 class PageSetupController extends Controller
 {
@@ -12,54 +12,32 @@ class PageSetupController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $pageSetups = PageSetup::all()->keyBy('slug'); // Pastikan 'slug' sesuai dengan yang digunakan
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+        return view('admin.pageSetups.index', compact('pageSetups'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(PageSetupStoreRequest $request)
     {
-        //
+        // Mengambil slug dari request untuk menentukan halaman yang akan diperbarui
+        $slug = $request->input('slug');
+
+        // Mencari atau membuat instance PageSetup berdasarkan slug
+        $pageSetup = PageSetup::updateOrCreate(
+            ['slug' => $slug],
+            [
+                'title' => $request->input('title'),
+                'meta_title' => $request->input('meta_title'),
+                'meta_description' => $request->input('meta_description'),
+                'meta_keywords' => $request->input('meta_keywords'),
+            ]
+        );
+
+        // Mengembalikan dengan pesan sukses
+        return redirect()->route('admin.pageSetups.index')->with('success', 'Page setup updated successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(PageSetup $pageSetup)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(PageSetup $pageSetup)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, PageSetup $pageSetup)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(PageSetup $pageSetup)
-    {
-        //
-    }
 }
