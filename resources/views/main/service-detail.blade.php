@@ -40,10 +40,10 @@
                             </div>
                             <div class="widget-content">
                                 <ul class="list-unstyled">
-                                    @foreach ($services as $service)
+                                    @foreach ($services as $item)
                                         <li>
-                                            <a href="{{ route('service.detail', $service->slug) }}">
-                                                {{ $service->title }}
+                                            <a href="{{ route('service.detail', $item->slug) }}">
+                                                {{ $item->title }}
                                             </a>
                                         </li>
                                     @endforeach

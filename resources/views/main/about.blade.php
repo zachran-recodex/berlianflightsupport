@@ -274,11 +274,7 @@
             <!-- End .container-->
         </div>
     </section>
-    <!--
-          ============================
-          CTA #5 Section
-          ============================
-          -->
+
     <section class="cta cta-5 bg-overlay" id="cta-5">
         <div class="row">
             <div class="col-12 col-lg-6">
@@ -312,11 +308,7 @@
         </div>
         <!-- End .row-->
     </section>
-    <!--
-          ============================
-          Blog #1 Section
-          ============================
-          -->
+
     <section class="blog blog-grid" id="blog-1">
         <div class="container">
             <div class="row">
@@ -331,85 +323,78 @@
             </div>
             <!-- End .row-->
             <div class="row">
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/1.jpg"
-                                    alt="Importers achieve cost savings through the First Sale rule!" /></a></div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">cargo</a><a
-                                    href="javascript:void(0)">insights</a>
+                @forelse ($blogs as $blog)
+                    <div class=" col-12 col-md-6 col-lg-4">
+                        <div class="blog-entry">
+                            <div class="entry-img">
+                                <a href="{{ route('blog.detail', $blog->slug) }}">
+                                    <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" />
+                                </a>
                             </div>
-                            <div class="entry-title">
-                                <h4><a href="blog-single.html">Importers achieve cost savings through the First Sale
-                                        rule!</a></h4>
+                            <!-- End .entry-img-->
+                            <!-- End .entry-date-->
+                            <div class="entry-content">
+                                <div class="entry-title">
+                                    <h4>
+                                        <a href="{{ route('blog.detail', $blog->slug) }}">
+                                            {{ $blog->title }}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="entry-date">
+                                    <span class="month">{{ $blog->created_at->format('M d') }}</span>
+                                    <span class="date">{{ $blog->created_at->format('Y') }}</span>
+                                </div>
+                                <div class="entry-bio">
+                                    <p>
+                                        {!! Str::limit($blog->description, 50) !!}
+                                    </p>
+                                </div>
+                                <div class="entry-more">
+                                    <a href="{{ route('blog.detail', $blog->slug) }}">Read more</a>
+                                </div>
                             </div>
-                            <div class="entry-date"><span class="month">jan 20</span><span
-                                    class="date">2021</span></div>
-                            <div class="entry-bio">
-                                <p>The trade war currently ensuing between the nations around the globe, fiercely with
-                                    China, shows no signs of the first set of tariffs levied against solar...</p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
                         </div>
+                        <!-- End .entry-content-->
                     </div>
-                    <!-- End .entry-content-->
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/2.jpg"
-                                    alt="Cargo flow through better supply chain visibility, control." /></a></div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">warehouse</a><a
-                                    href="javascript:void(0)">construction</a>
+                @empty
+                    <div class=" col-12 col-md-6 col-lg-4">
+                        <div class="blog-entry">
+                            <div class="entry-img">
+                                <a href="blog-single.html">
+                                    <img src="{{ asset('') }}images/blog/grid/1.jpg"
+                                        alt="Importers achieve cost savings through the First Sale rule!" />
+                                </a>
                             </div>
-                            <div class="entry-title">
-                                <h4><a href="blog-single.html">Cargo flow through better supply chain visibility,
-                                        control.</a></h4>
+                            <!-- End .entry-img-->
+                            <!-- End .entry-date-->
+                            <div class="entry-content">
+                                <div class="entry-category">
+                                    <a href="javascript:void(0)">cargo</a><a href="javascript:void(0)">insights</a>
+                                </div>
+                                <div class="entry-title">
+                                    <h4>
+                                        <a href="blog-single.html">
+                                            Importers achieve cost savings through the First Sale rule!
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="entry-date">
+                                    <span class="month">jan 20</span><span class="date">2021</span>
+                                </div>
+                                <div class="entry-bio">
+                                    <p>
+                                        The trade war currently ensuing between the nations around the globe, fiercely
+                                        with
+                                        China, shows no signs of the first set of tariffs levied against solar...
+                                    </p>
+                                </div>
+                                <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
                             </div>
-                            <div class="entry-date"><span class="month">jan 23</span><span
-                                    class="date">2021</span></div>
-                            <div class="entry-bio">
-                                <p>Global provider connected products for consumers, and enterprises worldwide, supply
-                                    chain control is everything, provide visibility and traceability needed for...</p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
                         </div>
+                        <!-- End .entry-content-->
                     </div>
-                    <!-- End .entry-content-->
-                </div>
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/3.jpg"
-                                    alt="Importance of specialized focus in Projects, Oil &amp; Gas Logistics?" /></a>
-                        </div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">logistics</a><a
-                                    href="javascript:void(0)">distrbution</a>
-                            </div>
-                            <div class="entry-title">
-                                <h4><a href="blog-single.html">Importance of specialized focus in Projects, Oil &amp;
-                                        Gas Logistics?</a></h4>
-                            </div>
-                            <div class="entry-date"><span class="month">jan 24</span><span
-                                    class="date">2021</span></div>
-                            <div class="entry-bio">
-                                <p>Our team provides skilled &amp; experienced managers who know the intricacies of this
-                                    vertical and focus on providing solutions in Oil &amp; Gas sector...</p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
-                        </div>
-                    </div>
-                    <!-- End .entry-content-->
-                </div>
+                @endforelse
             </div>
             <!-- End .row-->
         </div>

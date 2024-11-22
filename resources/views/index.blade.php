@@ -683,41 +683,78 @@
             </div>
             <!-- End .row-->
             <div class="row">
-                <div class=" col-12 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img">
-                            <a href="blog-single.html">
-                                <img src="{{ asset('') }}images/blog/grid/1.jpg"
-                                    alt="Importers achieve cost savings through the First Sale rule!" />
-                            </a>
+                @forelse ($blogs as $blog)
+                    <div class=" col-12 col-md-6 col-lg-4">
+                        <div class="blog-entry">
+                            <div class="entry-img">
+                                <a href="{{ route('blog.detail', $blog->slug) }}">
+                                    <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" />
+                                </a>
+                            </div>
+                            <!-- End .entry-img-->
+                            <!-- End .entry-date-->
+                            <div class="entry-content">
+                                <div class="entry-title">
+                                    <h4>
+                                        <a href="{{ route('blog.detail', $blog->slug) }}">
+                                            {{ $blog->title }}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="entry-date">
+                                    <span class="month">{{ $blog->created_at->format('M d') }}</span>
+                                    <span class="date">{{ $blog->created_at->format('Y') }}</span>
+                                </div>
+                                <div class="entry-bio">
+                                    <p>
+                                        {!! Str::limit($blog->description, 50) !!}
+                                    </p>
+                                </div>
+                                <div class="entry-more">
+                                    <a href="{{ route('blog.detail', $blog->slug) }}">Read more</a>
+                                </div>
+                            </div>
                         </div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category">
-                                <a href="javascript:void(0)">cargo</a><a href="javascript:void(0)">insights</a>
-                            </div>
-                            <div class="entry-title">
-                                <h4>
-                                    <a href="blog-single.html">
-                                        Importers achieve cost savings through the First Sale rule!
-                                    </a>
-                                </h4>
-                            </div>
-                            <div class="entry-date">
-                                <span class="month">jan 20</span><span class="date">2021</span>
-                            </div>
-                            <div class="entry-bio">
-                                <p>
-                                    The trade war currently ensuing between the nations around the globe, fiercely with
-                                    China, shows no signs of the first set of tariffs levied against solar...
-                                </p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
-                        </div>
+                        <!-- End .entry-content-->
                     </div>
-                    <!-- End .entry-content-->
-                </div>
+                @empty
+                    <div class=" col-12 col-md-6 col-lg-4">
+                        <div class="blog-entry">
+                            <div class="entry-img">
+                                <a href="blog-single.html">
+                                    <img src="{{ asset('') }}images/blog/grid/1.jpg"
+                                        alt="Importers achieve cost savings through the First Sale rule!" />
+                                </a>
+                            </div>
+                            <!-- End .entry-img-->
+                            <!-- End .entry-date-->
+                            <div class="entry-content">
+                                <div class="entry-category">
+                                    <a href="javascript:void(0)">cargo</a><a href="javascript:void(0)">insights</a>
+                                </div>
+                                <div class="entry-title">
+                                    <h4>
+                                        <a href="blog-single.html">
+                                            Importers achieve cost savings through the First Sale rule!
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="entry-date">
+                                    <span class="month">jan 20</span><span class="date">2021</span>
+                                </div>
+                                <div class="entry-bio">
+                                    <p>
+                                        The trade war currently ensuing between the nations around the globe, fiercely
+                                        with
+                                        China, shows no signs of the first set of tariffs levied against solar...
+                                    </p>
+                                </div>
+                                <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
+                            </div>
+                        </div>
+                        <!-- End .entry-content-->
+                    </div>
+                @endforelse
             </div>
             <!-- End .row-->
         </div>

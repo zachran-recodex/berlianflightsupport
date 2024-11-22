@@ -18,6 +18,7 @@ Route::get('/services', [MainController::class, 'service'])->name('service');
 Route::get('/services/{slug}', [MainController::class, 'serviceDetail'])->name('service.detail');
 Route::get('/gallery', [MainController::class, 'gallery'])->name('gallery');
 Route::get('/blog', [MainController::class, 'blog'])->name('blog');
+Route::get('/blog/{slug}', [MainController::class, 'blogDetail'])->name('blog.detail');
 Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 Route::get('/request-a-quote', [MainController::class, 'quote'])->name('quote');
 

@@ -24,170 +24,74 @@
         <!-- End .container-->
     </section>
     <!-- End #page-title-->
-    <!--
-          ============================
-          Blog Grid Section
-          ============================
-          -->
+
     <section class="blog blog-grid pb-90" id="blog">
         <div class="container">
             <div class="row">
-                <div class=" col-sm-6 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/1.jpg"
-                                    alt="Importers achieve cost savings through the First Sale rule!" /></a></div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">cargo</a><a
-                                    href="javascript:void(0)">insights</a>
+                @forelse ($blogs as $blog)
+                    <div class=" col-sm-6 col-md-6 col-lg-4">
+                        <div class="blog-entry">
+                            <div class="entry-img">
+                                <a href="{{ route('blog.detail', $blog->slug) }}">
+                                    <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" />
+                                </a>
                             </div>
-                            <div class="entry-title">
-                                <h4><a href="blog-single.html">Importers achieve cost savings through the First Sale
-                                        rule!</a></h4>
+                            <!-- End .entry-img-->
+                            <!-- End .entry-date-->
+                            <div class="entry-content">
+                                <div class="entry-title">
+                                    <h4>
+                                        <a href="{{ route('blog.detail', $blog->slug) }}">
+                                            {{ $blog->title }}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="entry-date">
+                                    <span class="month">{{ $blog->created_at->format('M d') }}</span>
+                                    <span class="date">{{ $blog->created_at->format('Y') }}</span>
+                                </div>
+                                <div class="entry-bio">
+                                    <p>
+                                        {!! Str::limit($blog->description, 50) !!}
+                                    </p>
+                                </div>
+                                <div class="entry-more">
+                                    <a href="{{ route('blog.detail', $blog->slug) }}">Read more</a>
+                                </div>
                             </div>
-                            <div class="entry-date"><span class="month">jan 20</span><span class="date">2021</span>
-                            </div>
-                            <div class="entry-bio">
-                                <p>The trade war currently ensuing between the nations around the globe, fiercely with
-                                    China, shows no signs of the first set of tariffs levied against solar...</p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
                         </div>
+                        <!-- End .entry-content-->
                     </div>
-                    <!-- End .entry-content-->
-                </div>
-                <div class=" col-sm-6 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/2.jpg"
-                                    alt="Cargo flow through better supply chain visibility, control." /></a></div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">warehouse</a><a
-                                    href="javascript:void(0)">construction</a>
+                @empty
+                    <div class=" col-sm-6 col-md-6 col-lg-4">
+                        <div class="blog-entry">
+                            <div class="entry-img"><a href="blog-single.html"><img
+                                        src="{{ asset('') }}images/blog/grid/1.jpg"
+                                        alt="Importers achieve cost savings through the First Sale rule!" /></a></div>
+                            <!-- End .entry-img-->
+                            <!-- End .entry-date-->
+                            <div class="entry-content">
+                                <div class="entry-category"><a href="javascript:void(0)">cargo</a><a
+                                        href="javascript:void(0)">insights</a>
+                                </div>
+                                <div class="entry-title">
+                                    <h4><a href="blog-single.html">Importers achieve cost savings through the First Sale
+                                            rule!</a></h4>
+                                </div>
+                                <div class="entry-date"><span class="month">jan 20</span><span
+                                        class="date">2021</span>
+                                </div>
+                                <div class="entry-bio">
+                                    <p>The trade war currently ensuing between the nations around the globe, fiercely
+                                        with
+                                        China, shows no signs of the first set of tariffs levied against solar...</p>
+                                </div>
+                                <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
                             </div>
-                            <div class="entry-title">
-                                <h4><a href="blog-single.html">Cargo flow through better supply chain visibility,
-                                        control.</a></h4>
-                            </div>
-                            <div class="entry-date"><span class="month">jan 23</span><span class="date">2021</span>
-                            </div>
-                            <div class="entry-bio">
-                                <p>Global provider connected products for consumers, and enterprises worldwide, supply
-                                    chain control is everything, provide visibility and traceability needed for...</p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
                         </div>
+                        <!-- End .entry-content-->
                     </div>
-                    <!-- End .entry-content-->
-                </div>
-                <div class=" col-sm-6 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/3.jpg"
-                                    alt="Importance of specialized focus in Projects, Oil &amp; Gas Logistics?" /></a>
-                        </div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">logistics</a><a
-                                    href="javascript:void(0)">distrbution</a>
-                            </div>
-                            <div class="entry-title">
-                                <h4><a href="blog-single.html">Importance of specialized focus in Projects, Oil &amp;
-                                        Gas Logistics?</a></h4>
-                            </div>
-                            <div class="entry-date"><span class="month">jan 24</span><span class="date">2021</span>
-                            </div>
-                            <div class="entry-bio">
-                                <p>Our team provides skilled &amp; experienced managers who know the intricacies of this
-                                    vertical and focus on providing solutions in Oil &amp; Gas sector...</p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
-                        </div>
-                    </div>
-                    <!-- End .entry-content-->
-                </div>
-                <div class=" col-sm-6 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/4.jpg"
-                                    alt="Changes to our Trade Credit Policy and Procedures " /></a></div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">news</a><a
-                                    href="javascript:void(0)">industry</a>
-                            </div>
-                            <div class="entry-title">
-                                <h4><a href="blog-single.html">Changes to our Trade Credit Policy and Procedures </a>
-                                </h4>
-                            </div>
-                            <div class="entry-date"><span class="month">jan 20</span><span class="date">2021</span>
-                            </div>
-                            <div class="entry-bio">
-                                <p>The Atradius platform will provide us with a much deeper pool of research to assist
-                                    with assessment of new credit applications and credit limits...</p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
-                        </div>
-                    </div>
-                    <!-- End .entry-content-->
-                </div>
-                <div class=" col-sm-6 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/5.jpg"
-                                    alt="New Additions to our great Metro trucks Fleet " /></a></div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">insights</a><a
-                                    href="javascript:void(0)">industry</a>
-                            </div>
-                            <div class="entry-title">
-                                <h4><a href="blog-single.html">New Additions to our great Metro trucks Fleet </a></h4>
-                            </div>
-                            <div class="entry-date"><span class="month">jan 23</span><span
-                                    class="date">2021</span></div>
-                            <div class="entry-bio">
-                                <p>These new vehicles are all extra high trucks, with a height equal to that of a
-                                    trailer. This allows us to accommodate our clients with high freight...</p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
-                        </div>
-                    </div>
-                    <!-- End .entry-content-->
-                </div>
-                <div class=" col-sm-6 col-md-6 col-lg-4">
-                    <div class="blog-entry">
-                        <div class="entry-img"><a href="blog-single.html"><img
-                                    src="{{ asset('') }}images/blog/grid/6.jpg"
-                                    alt="The new Driver Training &amp; Recruitment Program " /></a></div>
-                        <!-- End .entry-img-->
-                        <!-- End .entry-date-->
-                        <div class="entry-content">
-                            <div class="entry-category"><a href="javascript:void(0)">news</a><a
-                                    href="javascript:void(0)">logistics</a>
-                            </div>
-                            <div class="entry-title">
-                                <h4><a href="blog-single.html">The new Driver Training &amp; Recruitment Program </a>
-                                </h4>
-                            </div>
-                            <div class="entry-date"><span class="month">jan 24</span><span
-                                    class="date">2021</span></div>
-                            <div class="entry-bio">
-                                <p>If you know of anyone looking for a bigger opportunity, a fresh start, or just
-                                    something different, please have them contact our operations team now...</p>
-                            </div>
-                            <div class="entry-more"> <a href="javascript:void(0)">Read more</a></div>
-                        </div>
-                    </div>
-                    <!-- End .entry-content-->
-                </div>
+                @endforelse
             </div>
             <!-- End .row-->
             <div class="row">

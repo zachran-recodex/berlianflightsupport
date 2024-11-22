@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Blog;
 use App\Models\Gallery;
 use App\Models\Service;
 use App\Models\HeroSection;
@@ -19,17 +20,19 @@ class MainController extends Controller
         $heroSections = HeroSection::all();
         $services = Service::all();
         $about = About::first();
+        $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get(); // Ambil 3 blog terbaru
 
         // Kirim data ke view
-        return view('index', compact('heroSections', 'services', 'about'));
+        return view('index', compact('heroSections', 'services', 'about', 'blogs'));
     }
 
     public function about()
     {
         $services = Service::all();
         $about = About::first();
+        $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get(); // Ambil 3 blog terbaru
 
-        return view ('main.about', compact('services', 'about'));
+        return view ('main.about', compact('services', 'about', 'blogs'));
     }
 
     public function service()
@@ -57,7 +60,20 @@ class MainController extends Controller
 
     public function blog()
     {
-        return view ('main.blog');
+        $blogs = Blog::all();
+
+        return view ('main.blog', compact('blogs'));
+    }
+
+    public function blogDetail($slug)
+    {
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+
+        $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get(); // Ambil 3 blog terbaru
+        $services = Service::orderBy('id')->paginate(5);
+
+        // Kirim data ke view
+        return view('main.blog-detail', compact('blog', 'blogs', 'services'));
     }
 
     public function contact()
