@@ -1836,6 +1836,28 @@ blockquote .author {
     border-color: #1b1a1a;
 }
 
+.btn--gold {
+    background-color: #dfbe28;
+    color: #ffffff;
+    border-color: #dfbe28;
+}
+
+.btn--gold:active,
+.btn--gold:focus,
+.btn--gold:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #dfbe28;
+}
+
+.btn--gold.btn--inverse:active,
+.btn--gold.btn--inverse:focus,
+.btn--gold.btn--inverse:hover {
+    background-color: #ffffff;
+    color: #dfbe28;
+    border-color: #ffffff;
+}
+
 /* Button Fluid */
 .btn--block {
     width: 100%;
@@ -3201,7 +3223,7 @@ ul.list-icons li i {
 
 /* Header Light */
 .header-light {
-    background-color: #ffffff;
+    background-color: #0c004f;
 }
 
 .header-light .navbar .logo-dark {
@@ -3609,7 +3631,7 @@ ul.list-icons li i {
 }
 
 .navbar.navbar-light .navbar-nav > li > a {
-    color: #1b1a1a;
+    color: #ffffff;
 }
 
 .navbar.navbar-light .navbar-nav > li > a::before {
@@ -3643,7 +3665,7 @@ ul.list-icons li i {
     top: 0;
     right: 0;
     left: 0;
-    background: #ffffff;
+    background: #0c004f;
     -webkit-animation: fadeInDown 1s ease-in-out;
     animation: fadeInDown 1s ease-in-out;
     -webkit-box-shadow: 0 2px 4px rgba(3, 27, 78, 0.1);
@@ -3659,7 +3681,7 @@ ul.list-icons li i {
 }
 
 .navbar.navbar-fixed .navbar-nav > li > a {
-    color: #1b1a1a;
+    color: #ffffff;
 }
 
 .navbar.navbar-fixed .navbar-nav > li > a::before {

@@ -41,8 +41,8 @@
 
                                         <!-- Buttons -->
                                         <div class="slide-buttons">
-                                            <a class="btn btn--primary" href="{{ route('about') }}">Learn More</a>
-                                            <a class="btn btn--white" href="{{ route('contact') }}">Contact Us</a>
+                                            <a class="btn btn--gold" href="{{ route('about') }}">Company Profile</a>
+                                            <a class="btn btn--primary" href="{{ route('contact') }}">Contact Us</a>
                                         </div>
                                     </div>
                                     <!-- End .slide-content -->
